@@ -11,7 +11,7 @@
 }
 
 .icon:hover {
-  transform: scale(1.4) translateY(-10px);
+  transform: scale(1.4) translateY(-20px);
   margin: 20px 20px 0px 20px;
 }
 
@@ -31,7 +31,7 @@
     transform: translateY(-35px);
   }
   80% {
-    transform: translateY(10px);
+    transform: translateY(3px);
   }
   100% {
     transform: translateY(0);
@@ -39,13 +39,13 @@
 }
 
 .AppIconlight {
-  color: #505050;
+  color: #1f1f1f;
   background: #fff;
-  border-radius: 13px;
+  border-radius: 11px;
 
-  height: 49px;
-  width: 49px;
-  margin: 5px 5px 2px 5px;
+  height: 46px;
+  width: 46px;
+  margin: 7px 5px 2px 5px;
 
   display: flex;
   align-items: center;
@@ -55,11 +55,11 @@
 .AppIcondark {
   color: #ececec;
   background: #1f1f1f;
-  border-radius: 16px;
+  border-radius: 11px;
 
-  height: 50px;
-  width: 50px;
-  margin: 5px 5px 2px 5px;
+  height: 46px;
+  width: 46px;
+  margin: 7px 5px 2px 5px;
 
   display: flex;
   align-items: center;
@@ -68,6 +68,6 @@
 
 .dot {
   color: #fff;
-  font-size: 7px;
-  margin: 0;
+  font-size: 4px;
+  margin-top: 2px;
 }

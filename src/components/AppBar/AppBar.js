@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppIcons from "../AppIcons/AppIcons";
 import styled from "styled-components";
 
@@ -11,11 +11,25 @@ const openURL = (url) => {
 };
 
 const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
+  const [dotLocation, setDotLocation] = useState("Home");
+
+  const changePage = (page) => {
+    setTimeout(() => {
+      setDotLocation(page);
+    }, 750);
+  };
+
   return (
     <div className="container">
       <div className="AppBar">
         <div className="section ">
-          <AppIcons icon="fas fa-home icon" name="Home" theme={theme} />
+          <AppIcons
+            icon="fas fa-home icon"
+            name="Home"
+            theme={theme}
+            dotLocation={dotLocation}
+            clickHandler={() => changePage("Home")}
+          />
         </div>
 
         <Spacer />
@@ -27,6 +41,8 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
               name={item.name}
               key={item.id}
               theme={theme}
+              dotLocation={dotLocation}
+              clickHandler={() => changePage(item.name)}
             />
           ))}
         </div>
@@ -41,6 +57,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
               key={item.id}
               theme={theme}
               clickHandler={() => openURL(item.link)}
+              dotLocation={dotLocation}
             />
           ))}
         </div>

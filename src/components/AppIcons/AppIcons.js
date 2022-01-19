@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 
 import "./AppIcons.css";
 
-const AppIcons = ({ icon, theme, clickHandler }) => {
+const AppIcons = ({ icon, name, theme, clickHandler, dotLocation }) => {
   const [bounce, setBounce] = React.useState(false);
 
   const changeHandler = () => {
@@ -18,7 +17,7 @@ const AppIcons = ({ icon, theme, clickHandler }) => {
       <div onClick={clickHandler} className={bounce ? "bounce" : null}>
         <span className={icon + " AppIcon" + theme} onClick={changeHandler} />
       </div>
-      <span class="fas fa-circle dot" />
+      {dotLocation === name && <span className="fas fa-circle dot" />}
     </div>
   );
 };
