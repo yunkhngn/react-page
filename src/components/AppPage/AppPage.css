@@ -303,3 +303,35 @@
         }
 }
 
+@media screen and (max-height: 1280px) and (max-width:400px){
+    .AppPage{
+        top:30vh;
+        height:35vh;
+        width: 90vw;
+        left: 5vw;
+        right: 5vw;
+        }
+        .Avatar{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #fff;
+        position: relative;
+        right:10px;
+        margin-bottom:20px;
+        }
+        .TextDisplay{
+        margin:auto;
+        padding:10px 0 20px 0;
+        }
+        .TitlePage{
+        font-size: 20px;
+        }
+        .TextPage{
+        font-size: 12px;
+        }
+        .PrePara{
+        font-size: 12px;
+        }
+}
