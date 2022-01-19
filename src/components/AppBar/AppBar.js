@@ -5,7 +5,9 @@ import styled from "styled-components";
 import "./AppBar.css";
 
 const openURL = (url) => {
-  window.open(url, "_blank");
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 750);
 };
 
 const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
@@ -60,7 +62,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
 
 const Spacer = styled.div`
   height: 40px;
-  border-right: 1.7px solkey rgba(255, 255, 255, 0.3);
+  border-right: 1.7px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
 
   margin: 0px 5px;

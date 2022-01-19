@@ -7,7 +7,7 @@ const socialMedia = [
     id: 4,
     name: "Facebook",
     icon: "fab fa-facebook icon seperate",
-    link: "https://www.facebook.com/khoa.nguyen.9",
+    link: "https://www.facebook.com/youngboiCoder",
   },
   {
     id: 5,
@@ -20,6 +20,12 @@ const socialMedia = [
     name: "Github",
     icon: "fab fa-github icon",
     link: "https://github.com/youngboiCoder",
+  },
+  {
+    id: 7,
+    name: "Behance",
+    icon: "fab fa-behance icon",
+    link: "https://www.behance.net/youngboicoder",
   },
 ];
 
@@ -45,14 +51,14 @@ const websiteOptions = [
 ];
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const changeTheme = () => {
     console.log("Chaning theme");
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
+    if (theme === "light") {
       setTheme("dark");
+    } else {
+      setTheme("light");
     }
   };
 

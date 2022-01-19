@@ -4,23 +4,48 @@
     background 0.2s;
 }
 
+.IconContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}
+
 .icon:hover {
   transform: scale(1.4) translateY(-10px);
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
 }
 
 .seperate {
   margin: 40px solid red;
 }
 
+.bounce {
+  animation: clicked 0.75s infinite;
+}
+
+@keyframes clicked {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-35px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .AppIconlight {
-  color: #1f1f1f;
+  color: #505050;
   background: #fff;
   border-radius: 13px;
 
   height: 49px;
   width: 49px;
-  margin: 5px;
+  margin: 5px 5px 2px 5px;
 
   display: flex;
   align-items: center;
@@ -34,9 +59,15 @@
 
   height: 50px;
   width: 50px;
-  margin: 5px;
+  margin: 5px 5px 2px 5px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.dot {
+  color: #fff;
+  font-size: 7px;
+  margin: 0;
 }
