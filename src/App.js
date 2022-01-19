@@ -56,8 +56,12 @@ function App() {
   const changeTheme = () => {
     console.log("Chaning theme");
     if (theme === "light") {
+      document.body.classList.remove();
+      document.body.classList.add("Appdark");
       setTheme("dark");
     } else {
+      document.body.classList.remove();
+      document.body.classList.add("Applight");
       setTheme("light");
     }
   };
