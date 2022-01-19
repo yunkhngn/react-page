@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./AppHeader.css"
-import Time from "../Time/Time";
 
 const getTimeAndDate = () => {
     const date = new Date();
@@ -20,7 +19,17 @@ const getTimeAndDate = () => {
     }
 };
 /* Sửa giúp t cái function này */
-const AppHeader  = () => {
+const AppHeader = () => {
+    const [fullTime, setFulltime] = React.useState(getTimeAndDate());
+
+    React.useEffect(() => {
+        setFulltime(getTimeAndDate());
+        const interval = setInterval(() => {
+            setFulltime(getTimeAndDate());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="AppHeader">
             <div className="left">
@@ -34,11 +43,15 @@ const AppHeader  = () => {
                 <span className="menus hide">Help</span>
             </div>
 
-            <div className="right">      
-                <Time data={getTimeAndDate()}/>
-                
+            <div className="right">
+                <div className="menu-time">
+                    {fullTime.days + " " + fullTime.daynumber + " " + fullTime.months + " " + fullTime.year + ""}
+                    <span className="active time margin">
+                        {fullTime.hours + ":" + fullTime.minutes}
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
     );
 };
 export default AppHeader;

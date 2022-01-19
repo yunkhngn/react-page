@@ -32,29 +32,32 @@ const socialMedia = [
   },
 ];
 
-const websiteOptions = [
-  {
-    id: 1,
-    name: "About",
-    icon: "fas fa-address-card icon",
-    url: "/contact",
-  },
-  {
-    id: 2,
-    name: "Projects",
-    icon: "fas fa-lightbulb icon",
-    url: "/projects",
-  },
-  {
-    id: 3,
-    name: "Picture",
-    icon: "fas fa-camera icon",
-    url: "/picture",
-  },
-];
-
 function App() {
   const [theme, setTheme] = useState("light");
+  const [page, setPage] = useState(true);
+  const [dotLocation, setDotLocation] = useState("Home");
+
+  const websiteOptions = [
+    {
+      id: 1,
+      name: "About",
+      icon: "fas fa-address-card icon",
+      url: "/contact",
+      open: () => setPage(true),
+    },
+    {
+      id: 2,
+      name: "Projects",
+      icon: "fas fa-lightbulb icon",
+      url: "/projects",
+    },
+    {
+      id: 3,
+      name: "Picture",
+      icon: "fas fa-camera icon",
+      url: "/picture",
+    },
+  ];
 
   const changeTheme = () => {
     console.log("Chaning theme");
@@ -72,12 +75,14 @@ function App() {
   return (
     <div className={"App App" + theme}>
       <AppHeader/>
-      <AppPage/>
+      {page && <AppPage closePage={() => {setPage(false); setDotLocation("Home")}}/>}
       <AppBar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}
         theme={theme}
         changeTheme={changeTheme}
+        dotLocation={dotLocation}
+        setDotLocation={setDotLocation}
       />
     </div>
   );

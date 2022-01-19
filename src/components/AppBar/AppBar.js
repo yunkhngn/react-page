@@ -10,8 +10,7 @@ const openURL = (url) => {
   }, 750);
 };
 
-const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
-  const [dotLocation, setDotLocation] = useState("Home");
+const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme, dotLocation, setDotLocation }) => {
 
   const changePage = (page) => {
     setTimeout(() => {
@@ -42,7 +41,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
               key={item.id}
               theme={theme}
               dotLocation={dotLocation}
-              clickHandler={() => changePage(item.name)}
+              clickHandler={() => {changePage(item.name); item.open();}}
             />
           ))}
         </div>
