@@ -1,6 +1,9 @@
 import { useState } from "react";
+import React from 'react';
 import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
+import AppPage from "./components/AppPage/AppPage";
+import AppHeader from "./components/AppHeader/AppHeader";
 
 const socialMedia = [
   {
@@ -68,7 +71,8 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      <h1 className="test">Khoa's profile</h1>
+      <AppHeader/>
+      <AppPage/>
       <AppBar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}
