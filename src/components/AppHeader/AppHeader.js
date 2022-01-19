@@ -13,9 +13,9 @@ const getTimeAndDate = () => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     if (minutes < 10) {
-        return `${days[day]} ${daynumber} ${months[month]} ${year} ${hours}:0${minutes}`;
+        return `${days[day]} ${daynumber} ${months[month]} ${year}  ${hours}:0${minutes}`;
     } else {
-        return `${days[day]} ${daynumber} ${months[month]} ${year} ${hours}:${minutes}`;
+        return `${days[day]} ${daynumber} ${months[month]} ${year}  ${hours}:${minutes}`;
     }
 };
 
@@ -25,12 +25,12 @@ const AppHeader  = () => {
             <div className="left">
                 <span className="fab fa-apple apple-logo"></span>
                 <span className="menus active">Finder</span>
-                <span className="menus">File</span>
-                <span className="menus">Edit</span>
-                <span className="menus">View</span>
-                <span className="menus">Go</span>
-                <span className="menus">Window</span>
-                <span className="menus">Help</span>
+                <span className="menus hide">File</span>
+                <span className="menus hide">Edit</span>
+                <span className="menus hide">View</span>
+                <span className="menus hide">Go</span>
+                <span className="menus hide">Window</span>
+                <span className="menus hide">Help</span>
             </div>
 
             <div className="right">      

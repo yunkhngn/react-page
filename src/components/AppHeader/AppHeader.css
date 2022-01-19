@@ -68,3 +68,24 @@
 .margin{
     margin-left: 5px;
 }
+
+@media screen and (max-width: 700px) {
+   .AppHeader{
+        height: 20px;
+   }
+    .left{
+        margin-left:10px;
+    }
+    .menu-time{
+        right: 10px;
+        font-size: 12px;
+    }
+    .menus{
+        font-size: 12px;
+        margin-left:10px;
+    }
+    .hide{
+        display:none;
+    }
+}
+    
