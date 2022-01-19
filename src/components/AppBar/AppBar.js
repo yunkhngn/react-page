@@ -20,7 +20,12 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
 
         <div className="section ">
           {websiteOptions.map((item) => (
-            <AppIcons icon={item.icon} name={item.name} theme={theme} />
+            <AppIcons
+              icon={item.icon}
+              name={item.name}
+              key={item.id}
+              theme={theme}
+            />
           ))}
         </div>
 
@@ -31,6 +36,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
             <AppIcons
               icon={item.icon}
               name={item.name}
+              key={item.id}
               theme={theme}
               clickHandler={() => openURL(item.link)}
             />
@@ -54,7 +60,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
 
 const Spacer = styled.div`
   height: 40px;
-  border-right: 1.7px solid rgba(255, 255, 255, 0.3);
+  border-right: 1.7px solkey rgba(255, 255, 255, 0.3);
   border-radius: 20px;
 
   margin: 0px 5px;

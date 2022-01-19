@@ -4,16 +4,19 @@ import AppBar from "./components/AppBar/AppBar";
 
 const socialMedia = [
   {
+    id: 4,
     name: "Facebook",
     icon: "fab fa-facebook icon seperate",
     link: "https://www.facebook.com/khoa.nguyen.9",
   },
   {
+    id: 5,
     name: "Instagram",
     icon: "fab fa-instagram icon",
     link: "https://instagram.com/_youngboicoder",
   },
   {
+    id: 6,
     name: "Github",
     icon: "fab fa-github icon",
     link: "https://github.com/youngboiCoder",
@@ -22,16 +25,19 @@ const socialMedia = [
 
 const websiteOptions = [
   {
+    id: 1,
+    name: "About",
+    icon: "fas fa-address-card icon",
+    url: "/contact",
+  },
+  {
+    id: 2,
     name: "Projects",
     icon: "fas fa-lightbulb icon",
     url: "/projects",
   },
   {
-    name: "Contact",
-    icon: "fas fa-address-card icon",
-    url: "/contact",
-  },
-  {
+    id: 3,
     name: "Picture",
     icon: "fas fa-camera icon",
     url: "/picture",
