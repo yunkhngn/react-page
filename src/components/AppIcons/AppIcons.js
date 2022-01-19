@@ -2,9 +2,9 @@ import React from "react";
 
 import "./AppIcons.css";
 
-const AppIcons = ({ icon, theme, changeTheme }) => {
+const AppIcons = ({ icon, theme, clickHandler }) => {
   return (
-    <div onClick={changeTheme}>
+    <div onClick={clickHandler}>
       <span className={icon + " AppIcon" + theme}></span>
     </div>
   );

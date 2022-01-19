@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 import "./AppBar.css";
 
+const openURL = (url) => {
+  window.open(url, "_blank");
+};
+
 const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
   return (
     <div className="container">
@@ -24,7 +28,12 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
 
         <div className="section ">
           {socialMedia.map((item) => (
-            <AppIcons icon={item.icon} name={item.name} theme={theme} />
+            <AppIcons
+              icon={item.icon}
+              name={item.name}
+              theme={theme}
+              clickHandler={() => openURL(item.link)}
+            />
           ))}
         </div>
 
@@ -35,7 +44,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
             icon="fas fa-adjust icon"
             name="Change Theme"
             theme={theme}
-            changeTheme={changeTheme}
+            clickHandler={changeTheme}
           />
         </div>
       </div>
@@ -45,7 +54,7 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme }) => {
 
 const Spacer = styled.div`
   height: 40px;
-  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 1.7px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
 
   margin: 0px 5px;
