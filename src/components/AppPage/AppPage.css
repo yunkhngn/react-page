@@ -1,0 +1,55 @@
+.AppPage{
+    height: 85vh;
+    width: 40vw;
+    position: absolute;
+    left: 30vw;
+    right: 30vw;
+    top: 5vh;
+    background-color:antiquewhite;
+    border-radius: 10px;
+    background: rgba(83, 83, 83, 0.3);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.HeaderPage{
+    width: auto;
+    height: 20px;
+    border-radius: 10px 10px 0 0;
+    background: #f3eef2;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+.dotnav{
+    color:#ff6058;
+    font-size: 10px;
+    position: absolute;
+    left:10px;
+    top:20%;
+}
+.yellow{
+    color: #fdbe2d;
+    left:30px;
+}
+.green{
+    color: #28c940;
+    left:50px;
+}
+
+.ContainerText{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+.TitlePage{
+    margin: 10px;
+    text-align: left;    
+}
+.TextPage{
+    margin: 10px;
+    text-align: left;
+    font-size:15px;
+    font-weight: 400;
+}

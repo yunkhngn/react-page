@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./AppHeader.css"
+import Time from "../Time/Time";
 
 const getTimeAndDate = () => {
     const date = new Date();
@@ -13,12 +14,12 @@ const getTimeAndDate = () => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     if (minutes < 10) {
-        return `${days[day]} ${daynumber} ${months[month]} ${year}  ${hours}:0${minutes}`;
+        return { days: days[day], daynumber: daynumber, months: months[month], year: year, hours: hours, minutes: "0" + minutes };
     } else {
-        return `${days[day]} ${daynumber} ${months[month]} ${year}  ${hours}:${minutes}`;
+        return { days: days[day], daynumber: daynumber, months: months[month], year: year, hours: hours, minutes: minutes };
     }
 };
-
+/* Sửa giúp t cái function này */
 const AppHeader  = () => {
     return (
         <div className="AppHeader">
@@ -34,8 +35,8 @@ const AppHeader  = () => {
             </div>
 
             <div className="right">      
-                <div className="active menu-time">{getTimeAndDate()}
-                </div>
+                <Time data={getTimeAndDate()}/>
+                
         </div>
     </div>
     );
