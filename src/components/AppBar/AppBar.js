@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AppIcons from "../AppIcons/AppIcons";
 import styled from "styled-components";
 
@@ -10,8 +10,14 @@ const openURL = (url) => {
   }, 750);
 };
 
-const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme, dotLocation, setDotLocation }) => {
-
+const AppBar = ({
+  websiteOptions,
+  socialMedia,
+  theme,
+  changeTheme,
+  dotLocation,
+  setDotLocation,
+}) => {
   const changePage = (page) => {
     setTimeout(() => {
       setDotLocation(page);
@@ -41,7 +47,10 @@ const AppBar = ({ websiteOptions, socialMedia, theme, changeTheme, dotLocation, 
               key={item.id}
               theme={theme}
               dotLocation={dotLocation}
-              clickHandler={() => {changePage(item.name); item.open();}}
+              clickHandler={() => {
+                changePage(item.name);
+                item.open();
+              }}
             />
           ))}
         </div>

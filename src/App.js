@@ -1,5 +1,5 @@
 import { useState } from "react";
-import React from 'react';
+import React from "react";
 import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import AppPage from "./components/AppPage/AppPage";
@@ -50,12 +50,14 @@ function App() {
       name: "Projects",
       icon: "fas fa-lightbulb icon",
       url: "/projects",
+      open: () => console.log("Projects"),
     },
     {
       id: 3,
       name: "Picture",
       icon: "fas fa-camera icon",
       url: "/picture",
+      open: () => console.log("Picture"),
     },
   ];
 
@@ -74,8 +76,15 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      <AppHeader/>
-      {page && <AppPage closePage={() => {setPage(false); setDotLocation("Home")}}/>}
+      <AppHeader />
+      {page && (
+        <AppPage
+          closePage={() => {
+            setPage(false);
+            setDotLocation("Home");
+          }}
+        />
+      )}
       <AppBar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}
