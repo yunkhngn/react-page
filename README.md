@@ -7,5 +7,6 @@ _____
 - [ ] Sửa giúp anh cái function của cái dropdown, css cho nó ổn áp xíu.
 - [ ] Cải thiện cái function bật tắt, tương tác của Dock và Tab. Em cứ viết sẵn mấy cái template của cái tab còn lại a updates lại sau.
 - [ ] Dark mode mấy cái tab còn lại như cái tap ở AppPage, Nav, Dropdown
+- [ ] Thêm cái phần loading trong khi trang đang render.
 
 Thế thôi không có gì nhiều lắm. Có gì mình hoàn thiện
