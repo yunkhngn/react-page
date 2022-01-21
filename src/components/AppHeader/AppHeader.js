@@ -42,7 +42,17 @@ const AppHeader = () => {
                 <span className="menus hide">Window</span>
                 <span className="menus hide">Help</span>
             </div>
-
+            <div className="drop-down" onmouseOver="dropDown">
+                <ul>
+                    <li>Home</li>
+                    <hr></hr>
+                    <li>About</li>
+                    <hr></hr>
+                    <li>Projects</li>
+                    <hr></hr>
+                    <li>Pictures</li>
+                </ul>
+            </div>
             <div className="right">
                 <div className="menu-time">
                     {fullTime.days + " " + fullTime.daynumber + " " + fullTime.months + " " + fullTime.year + ""}

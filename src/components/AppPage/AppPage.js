@@ -26,7 +26,7 @@ const AppPage = ({ closePage }) => {
             </h2>
             <hr className="Seperator" />
             <p className="TextPage">
-              <strong>Dob:</strong> 12/04/2005
+              <strong>Jobs:</strong> Ăn bám tại Hanoi
             </p>
             <p className="TextPage">
               <strong>Address:</strong> Hà Nội

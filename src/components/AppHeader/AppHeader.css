@@ -68,7 +68,42 @@
 .margin{
     margin-left: 5px;
 }
-
+.drop-down{
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.18);
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
+    z-index: 1;
+    top: 35px;
+    left: 50px;
+    padding: 5px;
+    transition-duration: 0.5s;
+}
+.drop-down ul{
+    list-style: none;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    justify-content: space-between
+}
+.drop-down li{
+    display: block;
+    justify-content: left;
+    font-weight:450;
+    color: #fff;
+}
+.drop-down li:hover{
+    color: #1f1f1f;
+    cursor: pointer;
+}
+.drop-down hr{
+    margin-bottom: 0.5px;
+    border: 0;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.226);
+}
 @media screen and (max-width: 700px) {
    .AppHeader{
         height: 20px;
