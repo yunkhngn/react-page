@@ -70,9 +70,9 @@
 }
 .drop-down{
     z-index: 10000;
-    display: none;
+    
     position: absolute;
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(85, 85, 85, 0.28);
     width: auto;
     height: auto;
     border-radius: 5px;
