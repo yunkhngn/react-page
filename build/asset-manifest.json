@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/react-website/static/css/main.3772aeaa.chunk.css",
-    "main.js": "/react-website/static/js/main.dd2385e1.chunk.js",
-    "main.js.map": "/react-website/static/js/main.dd2385e1.chunk.js.map",
-    "runtime~main.js": "/react-website/static/js/runtime~main.31fb5731.js",
-    "runtime~main.js.map": "/react-website/static/js/runtime~main.31fb5731.js.map",
-    "static/js/2.8e13bcef.chunk.js": "/react-website/static/js/2.8e13bcef.chunk.js",
-    "static/js/2.8e13bcef.chunk.js.map": "/react-website/static/js/2.8e13bcef.chunk.js.map",
-    "static/js/3.4d063671.chunk.js": "/react-website/static/js/3.4d063671.chunk.js",
-    "static/js/3.4d063671.chunk.js.map": "/react-website/static/js/3.4d063671.chunk.js.map",
-    "index.html": "/react-website/index.html",
-    "precache-manifest.b881fb018dbd32107b781f6c2f097f7a.js": "/react-website/precache-manifest.b881fb018dbd32107b781f6c2f097f7a.js",
-    "service-worker.js": "/react-website/service-worker.js",
-    "static/css/main.3772aeaa.chunk.css.map": "/react-website/static/css/main.3772aeaa.chunk.css.map",
-    "static/media/avatar.png": "/react-website/static/media/avatar.18ca293f.png",
-    "static/media/App.css": "/react-website/static/media/macos-monterey.7a078e06.jpg"
+    "main.css": "/static/css/main.b0ab7a09.chunk.css",
+    "main.js": "/static/js/main.679b3ae3.chunk.js",
+    "main.js.map": "/static/js/main.679b3ae3.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.0b71179f.js",
+    "runtime~main.js.map": "/static/js/runtime~main.0b71179f.js.map",
+    "static/js/2.fa7fbc0e.chunk.js": "/static/js/2.fa7fbc0e.chunk.js",
+    "static/js/2.fa7fbc0e.chunk.js.map": "/static/js/2.fa7fbc0e.chunk.js.map",
+    "static/js/3.59d7151a.chunk.js": "/static/js/3.59d7151a.chunk.js",
+    "static/js/3.59d7151a.chunk.js.map": "/static/js/3.59d7151a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0159eaf61836a5f8bfc0137ed30612e6.js": "/precache-manifest.0159eaf61836a5f8bfc0137ed30612e6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b0ab7a09.chunk.css.map": "/static/css/main.b0ab7a09.chunk.css.map",
+    "static/media/avatar.png": "/static/media/avatar.18ca293f.png",
+    "static/media/App.css": "/static/media/macos-monterey.7a078e06.jpg"
   }
 }
