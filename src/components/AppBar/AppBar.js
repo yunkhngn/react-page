@@ -16,14 +16,7 @@ const AppBar = ({
   theme,
   changeTheme,
   dotLocation,
-  setDotLocation,
 }) => {
-  const changePage = (page) => {
-    setTimeout(() => {
-      setDotLocation(page);
-    }, 750);
-  };
-
   return (
     <div className="container">
       <div className="AppBar">
@@ -32,8 +25,7 @@ const AppBar = ({
             icon="fas fa-home icon"
             name="Home"
             theme={theme}
-            dotLocation={dotLocation}
-            clickHandler={() => changePage("Home")}
+            showDot={true}
           />
         </div>
 
@@ -47,8 +39,9 @@ const AppBar = ({
               key={item.id}
               theme={theme}
               dotLocation={dotLocation}
+              showDot={item.showDot}
+              setShowDot={item.setShowDot}
               clickHandler={() => {
-                changePage(item.name);
                 item.open();
               }}
             />

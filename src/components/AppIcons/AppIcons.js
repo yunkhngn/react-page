@@ -2,7 +2,7 @@ import React from "react";
 
 import "./AppIcons.css";
 
-const AppIcons = ({ icon, name, theme, clickHandler, dotLocation }) => {
+const AppIcons = ({ icon, name, theme, showDot, setShowDot }) => {
   const [bounce, setBounce] = React.useState(false);
 
   const changeHandler = () => {
@@ -14,10 +14,13 @@ const AppIcons = ({ icon, name, theme, clickHandler, dotLocation }) => {
 
   return (
     <div className="IconContainer">
-      <div onClick={clickHandler} className={bounce ? "bounce icon2" : "icon2"}>
+      <div
+        onClick={() => setShowDot(true)}
+        className={bounce ? "bounce icon2" : "icon2"}
+      >
         <span className={icon + " AppIcon" + theme} onClick={changeHandler} />
       </div>
-      {dotLocation === name && <span className="fas fa-circle dot" />}
+      {showDot && <span className="fas fa-circle dot" />}
     </div>
   );
 };

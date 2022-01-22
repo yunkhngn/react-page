@@ -37,6 +37,10 @@ function App() {
   const [page, setPage] = useState(true);
   const [dotLocation, setDotLocation] = useState("Home");
 
+  const [showAboutDot, setShowAboutDot] = useState(false);
+  const [showProjectsDot, setShowProjectsDot] = useState(false);
+  const [showPictureDot, setShowPictureDot] = useState(false);
+
   const websiteOptions = [
     {
       id: 1,
@@ -44,6 +48,8 @@ function App() {
       icon: "fas fa-address-card icon",
       url: "/contact",
       open: () => setPage(true),
+      showDot: showAboutDot,
+      setShowDot: setShowAboutDot,
     },
     {
       id: 2,
@@ -51,6 +57,8 @@ function App() {
       icon: "fas fa-lightbulb icon",
       url: "/projects",
       open: () => console.log("Projects"),
+      showDot: showProjectsDot,
+      setShowDot: setShowProjectsDot,
     },
     {
       id: 3,
@@ -58,6 +66,8 @@ function App() {
       icon: "fas fa-camera icon",
       url: "/picture",
       open: () => console.log("Picture"),
+      showDot: showPictureDot,
+      setShowDot: setShowPictureDot,
     },
   ];
 
