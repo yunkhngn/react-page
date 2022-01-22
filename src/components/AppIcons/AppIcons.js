@@ -7,7 +7,6 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
 
   const changeHandler = () => {
     setBounce(true);
-    clickHandler();
     setTimeout(() => {
       setBounce(false);
     }, 750);
@@ -19,7 +18,13 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
         onClick={() => setShowDot(true)}
         className={bounce ? "bounce icon2" : "icon2"}
       >
-        <span className={icon + " AppIcon" + theme} onClick={changeHandler} />
+        <span
+          className={icon + " AppIcon" + theme}
+          onClick={() => {
+            changeHandler();
+            clickHandler();
+          }}
+        />
       </div>
       {showDot && <span className="fas fa-circle dot" />}
     </div>
