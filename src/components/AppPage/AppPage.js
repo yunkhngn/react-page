@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import "./AppPage.css";
-import avatar from "./avatar.png";
+import avatar from "../../assets/avatar.png";
 import Draggable from "react-draggable";
 
 const AppPage = ({ closePage }) => {

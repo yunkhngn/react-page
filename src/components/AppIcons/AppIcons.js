@@ -14,6 +14,7 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
 
   return (
     <div className="IconContainer">
+      {false && <span className="AppIcon--label">{name}</span>}
       <div
         onClick={() => setShowDot(true)}
         className={bounce ? "bounce icon2" : "icon2"}
@@ -32,3 +33,4 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
 };
 
 export default AppIcons;
+

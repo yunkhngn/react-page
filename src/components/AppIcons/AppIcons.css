@@ -72,6 +72,10 @@
   margin-top: 2px;
 }
 
+.AppIcon--label{
+	display: absolute;
+}
+
 .icon2:hover ~ .dot {
   display: none;
 }
