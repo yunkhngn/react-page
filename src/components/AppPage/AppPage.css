@@ -143,9 +143,9 @@
     }
 }
 
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1920px) {
     .AppPage{
-        height:35vh;
+        height:39vh;
         width: 32vw;
         left: 34vw;
         right: 34vw;
