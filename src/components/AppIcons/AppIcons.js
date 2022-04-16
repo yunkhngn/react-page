@@ -2,10 +2,11 @@ import React from "react";
 
 import "./AppIcons.css";
 
-const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
+
+const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url }) => {
   const [bounce, setBounce] = React.useState(false);
 
-  const changeHandler = () => {
+  const changeHandler = (url) => {
     setBounce(true);
     setTimeout(() => {
       setBounce(false);
@@ -21,9 +22,11 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler }) => {
       >
         <span
           className={icon + " AppIcon" + theme}
-          onClick={() => {
+          onClick={(e) => {
             changeHandler();
             clickHandler();
+            window.history.pushState(null, null, url);
+            window.location.reload();
           }}
         />
       </div>

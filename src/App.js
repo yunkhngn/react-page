@@ -1,34 +1,41 @@
 import { useState } from "react";
 import React from "react";
 import "./App.css";
+
 import AppBar from "./components/AppBar/AppBar";
-import Homepage from "./Page/Homepage/Homepage";
 import AppHeader from "./components/AppHeader/AppHeader";
+
+import Homepage from "./Page/Homepage/Homepage";
+import Aboutpage from "./Page/Aboutpage/Aboutpage";
+import Picturepage from "./Page/Picturepage/Picturepage";
+import Projectpage from "./Page/Projectpage/Projectpage";
+
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 const socialMedia = [
   {
     id: 4,
     name: "Facebook",
     icon: "fab fa-facebook icon seperate",
-    link: "https://www.facebook.com/youngboiCoder",
+    link: "https://www.facebook.com/yun.khngn",
   },
   {
     id: 5,
     name: "Instagram",
     icon: "fab fa-instagram icon",
-    link: "https://instagram.com/_youngboicoder",
+    link: "https://instagram.com/yun.khngn_",
   },
   {
     id: 6,
     name: "Github",
     icon: "fab fa-github icon",
-    link: "https://github.com/youngboiCoder",
+    link: "https://github.com/yunkhngn",
   },
   {
     id: 7,
     name: "Behance",
     icon: "fab fa-behance icon",
-    link: "https://www.behance.net/youngboicoder",
+    link: "https://www.behance.net/yunkhngn",
   },
 ];
 
@@ -86,10 +93,16 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      <AppHeader/>
-      {page && (
-        <Homepage/>
-      )}
+      <BrowserRouter>
+        <Routes>
+
+          <Route path="/" element={<Homepage/>} />
+          <Route path="/contact" element={<Aboutpage/>} />
+          <Route path="/picture" element={<Picturepage/>} />
+          <Route path="/projects" element={<Projectpage/>} />
+
+        </Routes>
+      </BrowserRouter>
       <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}

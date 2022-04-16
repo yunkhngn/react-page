@@ -1,9 +1,8 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
-import './Homepage.css'
-import ContactForm from '../../components/ContactForm/ContactForm'
+import './Projectpage.css'
 
-const Homepage = () => {
+const Projectpage = () => {
   return (
     <div className="AppPage">
         <div className="HeaderPage">
@@ -12,9 +11,8 @@ const Homepage = () => {
           <i className="fas fa-circle dotnav green"></i>
         </div>
         <div className="ContainerText">
-          This is the homepage.
+            This is the projectpage.
         </div>
-        <ContactForm/>
         <div className="Footer">
           <Footer />
         </div>
@@ -22,4 +20,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default Projectpage

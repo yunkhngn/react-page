@@ -11,7 +11,7 @@ const Aboutpage = () => {
           <i className="fas fa-circle dotnav green"></i>
         </div>
         <div className="ContainerText">
-          
+        This is the aboutpage.
         </div>
         <div className="Footer">
           <Footer />
