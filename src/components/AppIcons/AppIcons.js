@@ -27,15 +27,10 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
             clickHandler();
           }}
         />
-      </div>
-      {showDot && <span className="fas fa-circle dot" />}
-          }}
-        />
-      </div>
+       </div>
       {showDot && <span className="fas fa-circle dot" />}
     </div>
   );
 };
 
 export default AppIcons;
-
