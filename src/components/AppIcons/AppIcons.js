@@ -17,7 +17,7 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
     <div className="IconContainer">
       {false && <span className="AppIcon--label">{name}</span>}
       <div
-        onClick={() => setShowDot(true)}
+        onClick={() => {setShowDot()}}
         className={bounce ? "bounce icon2" : "icon2"}
       >
         <span
