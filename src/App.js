@@ -48,6 +48,27 @@ function App() {
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
 
+  const showAboutDotHandler = () => {
+    setShowAboutDot(true);
+    setShowProjectsDot(false);
+    setShowPictureDot(false);
+    setDotLocation("About");
+  };
+
+  const showProjectsDotHandler = () => {
+    setShowAboutDot(false);
+    setShowProjectsDot(true);
+    setShowPictureDot(false);
+    setDotLocation("Projects");
+  };
+
+  const showPictureDotHandler = () => {
+    setShowAboutDot(false);
+    setShowProjectsDot(false);
+    setShowPictureDot(true);
+    setDotLocation("Picture");
+  };
+
   const websiteOptions = [
     {
       id: 1,
@@ -56,7 +77,7 @@ function App() {
       url: "/contact",
       open: () => setPage(true),
       showDot: showAboutDot,
-      setShowDot: setShowAboutDot,
+      setShowDot: showAboutDotHandler,
     },
     {
       id: 2,
@@ -65,7 +86,7 @@ function App() {
       url: "/projects",
       open: () => console.log("Projects"),
       showDot: showProjectsDot,
-      setShowDot: setShowProjectsDot,
+      setShowDot: showProjectsDotHandler,
     },
     {
       id: 3,
@@ -74,7 +95,7 @@ function App() {
       url: "/picture",
       open: () => console.log("Picture"),
       showDot: showPictureDot,
-      setShowDot: setShowPictureDot,
+      setShowDot: showPictureDotHandler,
     },
   ];
 
