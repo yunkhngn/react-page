@@ -17,7 +17,7 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
     <div className="IconContainer">
       {false && <span className="AppIcon--label">{name}</span>}
       <div
-        onClick={() => {setShowDot()}}
+        onClick={() => setShowDot()}
         className={bounce ? "bounce icon2" : "icon2"}
       >
         <span
@@ -25,10 +25,10 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
           onClick={() => {
             changeHandler();
             clickHandler();
-            if(url) {
-            window.history.pushState(null, null, url);
-            window.location.reload();
-            }
+          }}
+        />
+      </div>
+      {showDot && <span className="fas fa-circle dot" />}
           }}
         />
       </div>
