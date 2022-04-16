@@ -1,7 +1,7 @@
 .AppPage{
-    height: 190vh;
-    width: 70vw;
-    margin: 5em auto;    
+    height: 200vh;
+    width: 60vw;
+    margin: 5em auto 6em auto;    
 
     background-color:antiquewhite;
     border-radius: 10px;
@@ -20,6 +20,47 @@
     -webkit-backdrop-filter: blur(13px);
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .AppPage{
+        width: 95vw;
+        margin: 2em auto 4em auto;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .AppPage{
+        width: 95vw;
+        margin: 2em auto 4em auto;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .AppPage{
+        width: 95vw;
+        margin: 3em auto 6em auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .AppPage{
+        width: 95vw;
+        margin: 3em auto 6em auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .AppPage{
+        width: 95vw;
+        margin: 3em auto 6em auto;
+    }
+}
+
+
+
+/* Dont touch this shit */
 .dotnav{
     color:#ff6058;
     font-size: 10px;
