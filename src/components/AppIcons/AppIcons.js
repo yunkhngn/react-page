@@ -25,12 +25,17 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
           onClick={() => {
             changeHandler();
             clickHandler();
+            if(url) {
+            window.history.pushState(null, null, url);
+            window.location.reload();
+            }
           }}
         />
-       </div>
+      </div>
       {showDot && <span className="fas fa-circle dot" />}
     </div>
   );
 };
 
 export default AppIcons;
+
