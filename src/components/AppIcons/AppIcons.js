@@ -22,11 +22,13 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
       >
         <span
           className={icon + " AppIcon" + theme}
-          onClick={(e) => {
+          onClick={() => {
             changeHandler();
             clickHandler();
+            if(url) {
             window.history.pushState(null, null, url);
             window.location.reload();
+            }
           }}
         />
       </div>

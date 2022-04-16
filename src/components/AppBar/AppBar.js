@@ -27,6 +27,7 @@ const AppBar = ({
             name="Home"
             theme={theme}
             showDot={true}
+            clickHandler={() => {window.history.pushState(null, null, "/"); window.location.reload();}}
           />
         </div>
 
