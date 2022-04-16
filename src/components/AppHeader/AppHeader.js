@@ -53,7 +53,7 @@ const getTimeAndDate = () => {
     };
   }
 };
-/* Sửa giúp t cái function này */
+
 const AppHeader = () => {
   const [fullTime, setFulltime] = React.useState(getTimeAndDate());
   const [showDropdown, setShowDropdown] = React.useState(false);

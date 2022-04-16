@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
-import AppPage from "./components/AppPage/AppPage";
+import Homepage from "./Page/Homepage/Homepage";
 import AppHeader from "./components/AppHeader/AppHeader";
 
 const socialMedia = [
@@ -86,15 +86,11 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      <AppHeader />
+      <AppHeader/>
       {page && (
-        <AppPage
-          closePage={() => {
-            setPage(false);
-            setDotLocation("Home");
-          }}
-        />
+        <Homepage/>
       )}
+      <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}

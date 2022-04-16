@@ -10,7 +10,7 @@ const Footer = () => {
 
     return <FooterStyle style={{color: 'white', fontSize: "10px"}}>
         Copyright &copy;{year} All rights reserved | Created by
-        <FooterLink class="linking" href="https://www.facebook.com/youngboiCoder" target="_blank">
+        <FooterLink class="linking" href="https://www.facebook.com/yun.khngn" target="_blank">
             <strong> Khoa Nguyễn</strong>
         </FooterLink>
     </FooterStyle>;
