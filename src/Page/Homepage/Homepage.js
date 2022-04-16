@@ -1,20 +1,18 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import './Homepage.css'
-import ContactForm from '../../components/ContactForm/ContactForm'
 
 const Homepage = () => {
   return (
     <div className="AppPage">
         <div className="HeaderPage">
-          <i className="fas fa-circle dotnav"></i>
-          <i className="fas fa-circle dotnav yellow"></i>
-          <i className="fas fa-circle dotnav green"></i>
+          <div className="dotnav"/>
+          <div className="dotnav yellow"/>
+          <div className="dotnav green"/>
         </div>
         <div className="ContainerText">
           This is the homepage.
         </div>
-        <ContactForm/>
         <div className="Footer">
           <Footer />
         </div>

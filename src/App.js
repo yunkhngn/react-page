@@ -9,6 +9,7 @@ import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
 import Picturepage from "./Page/Picturepage/Picturepage";
 import Projectpage from "./Page/Projectpage/Projectpage";
+import Notfound from "./Page/Notfound/Notfound";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
@@ -43,11 +44,10 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [page, setPage] = useState(true);
   const [dotLocation, setDotLocation] = useState("Home");
-
   const [showAboutDot, setShowAboutDot] = useState(false);
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
-
+  console.log(page)
   const showAboutDotHandler = () => {
     setShowAboutDot(true);
     setShowProjectsDot(false);
@@ -74,7 +74,7 @@ function App() {
       id: 1,
       name: "About",
       icon: "fas fa-address-card icon",
-      url: "/contact",
+      url: "/about",
       open: () => setPage(true),
       showDot: showAboutDot,
       setShowDot: showAboutDotHandler,
@@ -117,12 +117,12 @@ function App() {
       <BrowserRouter>
         <Routes>
 
+          <Route path='*' element={<Notfound/>} />
           <Route path="/" element={<Homepage/>} />
           <Route path="/home" element={<Homepage/>} />
-          <Route path="/contact" element={<Aboutpage/>} />
+          <Route path="/about" element={<Aboutpage/>} />
           <Route path="/picture" element={<Picturepage/>} />
           <Route path="/projects" element={<Projectpage/>} />
-
         </Routes>
       </BrowserRouter>
       <AppHeader/>
