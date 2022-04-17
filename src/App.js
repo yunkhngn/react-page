@@ -115,6 +115,8 @@ function App() {
     }
   };
   
+  localStorage.setItem('theme', theme);
+
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
     console.log(data.is_on_maintenance)
