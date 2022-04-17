@@ -55,14 +55,20 @@ function App() {
     if (themeCheck == null) {
       themeCheck = "light";
       setTheme("light");
+      document.body.classList.remove();
+      document.body.classList.add("Applight");
     }
     else if (themeCheck === "light") {
       themeCheck = "light";
       setTheme("light");
+      document.body.classList.remove();
+      document.body.classList.add("Applight");
     } 
     else {
       themeCheck = "dark";
       setTheme("dark");
+      document.body.classList.remove();
+      document.body.classList.add("Appdark");
     }
     sessionStorage.setItem("themeCheck", themeCheck);
     setTheme(themeCheck)
@@ -121,7 +127,6 @@ function App() {
   ];
 
   const changeTheme = () => {
-    console.log('theme is', theme);
     if (theme === "light") {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
