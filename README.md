@@ -8,5 +8,7 @@
 - [x] Sửa giúp anh cái function của cái dropdown, css cho nó ổn áp xíu.
 - [ ] Lỗi chuyển trang k giữ theme
 - [ ] Thêm cái phần loading trong khi trang đang render.
+- [ ] Dropdown chưa có route
+- [ ] Dot dưới bar chưa fix
 
 Thế thôi không có gì nhiều lắm. Có gì mình hoàn thiện
