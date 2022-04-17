@@ -4,12 +4,14 @@ import "./App.css";
 
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
+import Footer from "./components/Footer/Footer";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
 import Picturepage from "./Page/Picturepage/Picturepage";
 import Projectpage from "./Page/Projectpage/Projectpage";
 import Notfound from "./Page/Notfound/Notfound";
+
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
@@ -114,7 +116,18 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      <BrowserRouter>
+      
+      <div className="AppPage">
+
+        <div className="HeaderPage">
+          <div className="dotnav"/>
+          <div className="dotnav yellow"/>
+          <div className="dotnav green"/>
+        </div>
+
+        <div className="ContainerText">
+        
+        <BrowserRouter>
         <Routes>
 
           <Route path='*' element={<Notfound/>} />
@@ -125,6 +138,11 @@ function App() {
           <Route path="/projects" element={<Projectpage/>} />
         </Routes>
       </BrowserRouter>
+
+        </div>
+          <Footer className="Footer" />
+      </div>
+
       <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}
