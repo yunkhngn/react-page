@@ -107,12 +107,11 @@ function App() {
     if (theme === "light") {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
-      setTheme("dark");
+      localStorage.setItem('theme', 'dark');
     } else {
       document.body.classList.remove();
       document.body.classList.add("Applight");
-      setTheme("light");
-    }
+      localStorage.setItem('theme', 'light');
   };
   
   localStorage.setItem('theme', theme);
