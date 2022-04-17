@@ -5,14 +5,13 @@ import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
-import ScrollTo from "./components/ScrollTo/ScrollTo";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
 import Picturepage from "./Page/Picturepage/Picturepage";
 import Projectpage from "./Page/Projectpage/Projectpage";
 import Notfound from "./Page/Notfound/Notfound";
-
+import Maintenance from "./components/Maintenance/Maintenance";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
@@ -50,6 +49,7 @@ function App() {
   const [showAboutDot, setShowAboutDot] = useState(false);
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
+
   console.log(page)
   const showAboutDotHandler = () => {
     setShowAboutDot(true);
@@ -114,10 +114,22 @@ function App() {
       setTheme("light");
     }
   };
+  
+  const getMaintenanceStatus = () => {
+    var data = require('./Json/isMaintenanceOrNot.json')
+    console.log(data.is_on_maintenance)
+    if (data.is_on_maintenance === true) {
+      return "production";
+    }
+  }
 
+  if (process.env.NODE_ENV === getMaintenanceStatus()){
+    return <Maintenance/> 
+  }
+
+  else{
   return (
     <div className={"App App" + theme}>
-      <ScrollTo/>
       <div className="AppPage">
 
         <div className="HeaderPage" id="#top">
@@ -130,10 +142,9 @@ function App() {
         
         <BrowserRouter>
         <Routes>
-
           <Route path='*' element={<Notfound/>} />
-          <Route path="/" element={<Homepage/>} />
-          <Route path="/home" element={<Homepage/>} />
+          <Route path="/" element={<Homepage/>}/>
+          <Route path="/home" element={<Homepage/>}/>
           <Route path="/about" element={<Aboutpage/>} />
           <Route path="/picture" element={<Picturepage/>} />
           <Route path="/projects" element={<Projectpage/>} />
@@ -154,6 +165,7 @@ function App() {
       />
     </div>
   );
+  }
 }
 
 export default App;
