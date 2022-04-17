@@ -10,6 +10,16 @@ const openURL = (url) => {
   }, 750);
 };
 
+const scrollTo = (id) => {
+  setTimeout(() => {
+    window.scrollTo({
+      top: document.querySelector(id).offsetTop,
+      behavior: "smooth",
+    });
+  }, 750);
+};
+
+
 const AppBar = ({
   websiteOptions,
   socialMedia,
@@ -74,6 +84,14 @@ const AppBar = ({
             name="Change Theme"
             theme={theme}
             clickHandler={changeTheme}
+          />
+        </div>
+        <div className="section">
+          <AppIcons
+            icon="fas fa-angle-up icon"
+            name="Menu"
+            theme={theme}
+            clickHandler={scrollTo}
           />
         </div>
       </div>
