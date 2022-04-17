@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import "./App.css";
 
@@ -43,12 +43,30 @@ const socialMedia = [
 ];
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
   const [page, setPage] = useState(true);
   const [dotLocation, setDotLocation] = useState("Home");
   const [showAboutDot, setShowAboutDot] = useState(false);
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
+
+  useEffect(() => {
+    var themeCheck = sessionStorage.getItem("themeCheck");
+    if (themeCheck == null) {
+      themeCheck = "light";
+      setTheme("light");
+    }
+    else if (themeCheck === "light") {
+      themeCheck = "light";
+      setTheme("light");
+    } 
+    else {
+      themeCheck = "dark";
+      setTheme("dark");
+    }
+    sessionStorage.setItem("themeCheck", themeCheck);
+    setTheme(themeCheck)
+  }, []);
 
   console.log(page)
   const showAboutDotHandler = () => {
@@ -103,18 +121,19 @@ function App() {
   ];
 
   const changeTheme = () => {
-    console.log("Chaning theme");
+    console.log('theme is', theme);
     if (theme === "light") {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
-      localStorage.setItem('theme', 'dark');
+      setTheme("dark");
+      sessionStorage.setItem("themeCheck", 'dark');
     } else {
       document.body.classList.remove();
       document.body.classList.add("Applight");
-      localStorage.setItem('theme', 'light');
+      setTheme("light");
+      sessionStorage.setItem("themeCheck", 'light');
+    }
   };
-  
-  localStorage.setItem('theme', theme);
 
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
