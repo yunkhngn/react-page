@@ -8,7 +8,7 @@ const Footer = () => {
         setYear(new Date().getFullYear());
     }, []);
 
-    return <FooterStyle style={{color: 'white', fontSize: "10px"}}>
+    return <FooterStyle style={{color: 'white', fontSize: "1em"}} className="noselect">
         Copyright &copy;{year} All rights reserved | Created by
         <FooterLink class="linking" href="https://www.facebook.com/yun.khngn" target="_blank">
             <strong> Khoa Nguyễn</strong>

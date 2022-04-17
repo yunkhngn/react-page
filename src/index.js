@@ -3,11 +3,30 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
+import { Client as Styletron } from "styletron-engine-atomic";
+import { ThemeProvider, StyleReset } from 'atomize';
+
+const debug =
+  process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
+
+// 1. Create a client engine instance
+const engine = new Styletron();
+
+const theme = {
+  shadows: {
+    "new-shadow": "0 16px 24px -2px rgba(0, 0, 0, 0.08)"
+  }
+  
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+     <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+     <ThemeProvider theme={theme}>
+      <StyleReset />
+      <App />
+    </ThemeProvider>
+    </StyletronProvider>,
   document.getElementById("root")
 );
 

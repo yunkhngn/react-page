@@ -5,6 +5,7 @@ import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
+import ScrollTo from "./components/ScrollTo/ScrollTo";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
@@ -116,10 +117,10 @@ function App() {
 
   return (
     <div className={"App App" + theme}>
-      
+      <ScrollTo/>
       <div className="AppPage">
 
-        <div className="HeaderPage">
+        <div className="HeaderPage" id="#top">
           <div className="dotnav"/>
           <div className="dotnav yellow"/>
           <div className="dotnav green"/>
@@ -142,7 +143,6 @@ function App() {
         </div>
           <Footer className="Footer" />
       </div>
-
       <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}

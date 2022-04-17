@@ -1,10 +1,13 @@
 import React from 'react'
+import { Div,
+        Text
+        } from "atomize";
 
 const Homepage = () => {
   return (
-    <div className='Homepage'>
-      This is the homepage
-    </div>
+    <Div>
+      <Text>Khoa Nguyen</Text>
+    </Div>
   )
 }
 

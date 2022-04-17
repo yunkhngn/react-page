@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./AppHeader.css";
 
 const getTimeAndDate = () => {
@@ -67,7 +66,7 @@ const AppHeader = () => {
   }, []);
 
   return (
-    <div className="AppHeader">
+    <div className="AppHeader noselect">
       <div className="left">
         <span className="fab fa-apple apple-logo"></span>
         <span
