@@ -51,6 +51,7 @@ function App() {
   const [showPictureDot, setShowPictureDot] = useState(false);
 
   useEffect(() => {
+    //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
     var themeCheck = sessionStorage.getItem("themeCheck");
     if (themeCheck == null) {
       themeCheck = "light";
@@ -74,7 +75,6 @@ function App() {
     setTheme(themeCheck)
   }, []);
 
-  console.log(page)
   const showAboutDotHandler = () => {
     setShowAboutDot(true);
     setShowProjectsDot(false);
@@ -142,7 +142,7 @@ function App() {
 
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
-    console.log(data.is_on_maintenance)
+    console.log("Website is on Maintenance?:", data.is_on_maintenance)
     if (data.is_on_maintenance === true) {
       return "production";
     }
