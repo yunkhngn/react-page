@@ -8,7 +8,7 @@ const Footer = () => {
         setYear(new Date().getFullYear());
     }, []);
 
-    return <FooterStyle style={{color: 'white', fontSize: "1em"}} className="noselect">
+    return <FooterStyle style={{color: 'white', fontSize: "1em"}} className="FooterCss noselect">
         Copyright &copy;{year} All rights reserved | Created by
         <FooterLink class="linking" href="https://www.facebook.com/yun.khngn" target="_blank">
             <strong> Khoa Nguyễn</strong>
@@ -18,13 +18,12 @@ const Footer = () => {
 
 const FooterLink = styled.a`
 text-decoration: none;
+font-size: 1em;
 color: #fff;
 `;
 
 const FooterStyle = styled.div`
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
+    margin:auto;
 `;
 
 export default Footer;

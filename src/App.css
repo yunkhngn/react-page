@@ -37,7 +37,7 @@
   padding-bottom: 2em;
 
   width: 60vw;
-  margin: 5em auto 6em auto;    
+  margin: 5em auto;    
 
   background-color:antiquewhite;
   border-radius: 10px;
@@ -56,7 +56,6 @@
   -webkit-backdrop-filter: blur(13px);
   text-align: left;
   justify-content: left;
-  margin-bottom:1em;
 }
 
 .dotnav{
@@ -139,4 +138,11 @@
       width: 60vw;
       margin: 3em auto 6em auto;
   }
+}
+
+.image {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }

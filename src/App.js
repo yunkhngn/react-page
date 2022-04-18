@@ -5,6 +5,7 @@ import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
+import Draggable from "react-draggable";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
@@ -49,7 +50,7 @@ function App() {
   const [showAboutDot, setShowAboutDot] = useState(false);
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
-
+  console.log(page)
   useEffect(() => {
     //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
     var themeCheck = sessionStorage.getItem("themeCheck");
@@ -155,6 +156,7 @@ function App() {
   else{
   return (
     <div className={"App App" + theme}>
+      <Draggable>
       <div className="AppPage">
 
         <div className="HeaderPage" id="#top">
@@ -178,7 +180,9 @@ function App() {
 
         </div>
           <Footer className="Footer" />
+          
       </div>
+      </Draggable>
       <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}
