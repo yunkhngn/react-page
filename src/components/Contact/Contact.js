@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Div, Text, Input, Row, Col, Button, Textarea, Image, Icon
 } from "atomize";
 import Sample from '../../assets/wall.png';
@@ -6,10 +6,50 @@ import Avatar from '../../assets/avatar.png';
 
 const Contact = () => {
     const [isHearted, setIsHearted] = React.useState(false);
+    const [name, setName] = useState(''); 
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
     const Hearted = () => {
     setIsHearted(true);
-    console.log('heart');
     }
+    const getCurrentDate = () => {
+        const date = new Date();
+        const hour = date.getHours();
+        const minutes = date.getMinutes();
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        return `${hour}:${minutes} | ${day}/${month}/${year}`;
+    }
+    const [dateNow, setDateNow] = React.useState(getCurrentDate());
+
+    useEffect (() => {
+        setInterval(() => {
+            setDateNow(getCurrentDate());
+        }, 1000);
+    }, [])
+
+    const submit = () => {
+      if (name === '' || email === '' || phone === '' || subject === '' || message === '') {
+        alert('Please fill all the fields');
+      }
+      else {
+        alert('Your message has been sent');
+      const data = {
+        name,
+        email,
+        phone,
+        subject,
+        message,
+        date: dateNow
+      }
+      console.log(data);
+      }
+    }
+    
   return (
     <Div
         bg='white'
@@ -24,18 +64,18 @@ const Contact = () => {
     <Row>
     <Col size={{ xs: 12, lg: 3 }}>
       <Div>
-        <Input placeholder="Name" m={{b:'1em'}}></Input>
-        <Input placeholder="Email" m={{b:'1em'}}></Input>
-        <Input placeholder="Phone" m={{b:'1em'}}></Input>
-        <Button d={{xs:"none", lg:"flex"}} w="100%" m={{b:'0.5em'}} bg="danger300" hoverBg="danger400" textColor="danger700">Submit</Button>
+        <Input value={name} onInput={e => setName(e.target.value)} placeholder="Name" m={{b:'1em'}}></Input>
+        <Input value={email} onInput={e => setEmail(e.target.value)} placeholder="Email" m={{b:'1em'}}></Input>
+        <Input value={phone} onInput={e => setPhone(e.target.value)} placeholder="Phone" m={{b:'1em'}}></Input>
+        <Button onClick={submit} d={{xs:"none", lg:"flex"}} w="100%" m={{b:'0.5em'}} bg="danger300" hoverBg="danger400" textColor="danger700">Submit</Button>
         <Text d={{xs:"none", lg:"flex"}} textSize="caption">This function is working properly. So don't spam my email. Thank you!</Text>
       </Div>
     </Col>
     <Col size={{ xs: 12, lg:5}}>
       <Div>
-      <Input placeholder="Subject" m={{b:'1em'}}></Input>
-      <Textarea placeholder="Message" m={{b:'1em'}} overflow="hidden" h="15em" maxH="15em" minH="15em"></Textarea>
-      <Button d={{lg:"none"}} w="100%" m={{b:'0.5em'}} bg="danger300" hoverBg="danger400" textColor="danger700">Submit</Button>
+      <Input value={subject} onInput={e => setSubject(e.target.value)} placeholder="Subject" m={{b:'1em'}}></Input>
+      <Textarea value={message} onInput={e => setMessage(e.target.value)} placeholder="Message" m={{b:'1em'}} overflow="hidden" h="15em" maxH="15em" minH="15em"></Textarea>
+      <Button onClick={submit} d={{lg:"none"}} w="100%" m={{b:'0.5em'}} bg="danger300" hoverBg="danger400" textColor="danger700">Submit</Button>
        <Text d={{lg:"none"}} textSize="caption" m={{b:'0.5em'}}>This function is working properly. So don't spam my email. Thank you!</Text>
       </Div>
     </Col>
@@ -67,14 +107,14 @@ const Contact = () => {
       m={{t:'1em'}}
       p='0.5em'
       >
-                <Div d="flex" justify="left" align="center">
-                <Div>
-                    <Text textSize="paragraph" textWeight="500" >Khoa Nguyễn</Text>
-                    <Text textSize="tiny" textWeight="500" textAlign="left" m={{l:"1em"}}>Wrote on 18/04/2022</Text>
-                </Div>
-                </Div>
-                <Icon name="Edit" color="gray800" size="1em" ></Icon>
-            </Div>
+        <Div d="flex" justify="left" align="center">
+          <Div>
+              <Text textSize="paragraph" textWeight="500" m={{r:"1.5em"}} >Khoa Nguyễn</Text>
+              <Text textSize="tiny" textWeight="500" textAlign="left" m={{l:"3em"}}>Published on {dateNow}</Text>
+          </Div>
+          </Div>
+              <Icon name="Edit" color="gray800" size="1em" ></Icon>
+          </Div>
     </Col>
     </Row>
     </Div>
