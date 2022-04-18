@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Div } from 'atomize';
 
 const Footer = () => {
     const [year, setYear] = React.useState(new Date().getFullYear());
@@ -8,22 +8,11 @@ const Footer = () => {
         setYear(new Date().getFullYear());
     }, []);
 
-    return <FooterStyle style={{color: 'white', fontSize: "1em"}} className="FooterCss noselect">
-        Copyright &copy;{year} All rights reserved | Created by
-        <FooterLink class="linking" href="https://www.facebook.com/yun.khngn" target="_blank">
-            <strong> Khoa Nguyễn</strong>
-        </FooterLink>
-    </FooterStyle>;
+    return (
+    <Div textSize={{xs:"caption", md:"paragraph"}}>
+        Copyright &copy;{year} All rights reserved | Created by <strong> Khoa Nguyễn</strong>
+    </Div>
+    );
 };
-
-const FooterLink = styled.a`
-text-decoration: none;
-font-size: 1em;
-color: #fff;
-`;
-
-const FooterStyle = styled.div`
-    margin:auto;
-`;
 
 export default Footer;

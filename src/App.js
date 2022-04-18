@@ -175,10 +175,8 @@ function App() {
           <Route path="/projects" element={<Projectpage/>} />
         </Routes>
       </BrowserRouter>
-
         </div>
-          <Footer className="Footer" />
-          
+        <Footer/>
       </div>
       <AppHeader/>
       <AppBar

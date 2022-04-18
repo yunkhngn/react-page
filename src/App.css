@@ -41,7 +41,7 @@
 
   background-color:antiquewhite;
   border-radius: 10px;
-  background: rgba(83, 83, 83, 0.3);
+  background: #f7f8f9;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -84,10 +84,6 @@
 .green:hover{
   background-color:#0e9c0e;
   transition-duration: 0.5s;
-}
-
-.Footer{
-  text-align: center;
 }
 
 .noselect {
