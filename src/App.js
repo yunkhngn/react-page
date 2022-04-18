@@ -157,7 +157,7 @@ function App() {
     <div className={"App App" + theme}>
       <div className="AppPage">
 
-        <div className="HeaderPage" id="#top">
+        <div className="HeaderPage" id="top">
           <div className="dotnav"/>
           <div className="dotnav yellow"/>
           <div className="dotnav green"/>
