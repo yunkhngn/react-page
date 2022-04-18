@@ -2,12 +2,17 @@ import React from 'react'
 import { Div, Text, Image, Button, Icon
 } from "atomize";
 import Avatar from '../../assets/avatar.png';
+import CV from '../../assets/Khoa Nguyen CV.pdf';
 
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
 }
 const openMessenger = () => {
   window.open('https://m.me/yun.khngn', '_blank');
+}
+const downloadCV = () => {
+  window.open(CV, '_blank');
+  
 }
 
 const ProfileCard = () => {
@@ -24,7 +29,7 @@ const ProfileCard = () => {
           <Image className="image" src={Avatar} w={{ xs: "60%", md: "20%" }} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle"/>
           <Text textSize="heading" textWeight="600">Khoa Nguyễn</Text>
           <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
-          <Text textSize="paragraph" maxW="25em" m="auto">Tương lai thuộc về những người tin vào vẻ đẹp trong chính những giấc mơ, hoài bão to lớn của mình...</Text>
+          <Text textSize="paragraph" textColor="gray900"  maxW="25em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">"Tương lai thuộc về những người tin vào vẻ đẹp trong chính những giấc mơ, hoài bão to lớn của mình..."</Text>
           <Div
           d="flex"
           justify="center"
@@ -39,17 +44,17 @@ const ProfileCard = () => {
               m={{ l: "1rem" }}
               />
               } 
-              bg="info700"
-              hoverBg="info600"
+              bg="info600"
+              hoverBg="info700"
               rounded="circle"
-              p={{ r: "1.5rem", l: "1rem" }}
+              p={{ r: "1rem", l: "1rem" }}
               m={{ r: "0.5rem" }}
               onClick={openFacebook}
               >Follow</Button>
               <Button
               suffix={
               <Icon
-              name="Message"
+              name="Download"
               size="16px"
               color="gray900"
               m={{ l: "1rem" }}
@@ -57,13 +62,24 @@ const ProfileCard = () => {
               }
               textColor="gray900" 
               bg="white"
-              hoverBg="gray100"
+              hoverBg="gray00"
               border="1px solid"
               borderColor="gray500"
               rounded="circle"
-              p={{ r: "1.5rem", l: "1rem" }}
+              p={{ r: "1rem", l: "1rem" }}
+              onClick={downloadCV}
+              >Resume</Button>
+              <Button
+              h="2.5rem"
+              w="2.5rem"
+              bg="success300"
+              hoverBg="success400"
+              rounded="circle"
+              m={{ l: "0.5rem" }}
               onClick={openMessenger}
-              >Message</Button>
+              >
+              <Icon name="MessageSolid" size="20px" color="success700" />
+             </Button>
           </Div>
         </Div>
   )

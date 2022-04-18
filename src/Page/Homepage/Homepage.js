@@ -4,13 +4,15 @@ import { Div
 
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Spacer from '../../components/Spacer/Spacer';
+import Contact from '../../components/Contact/Contact';
 
 const Homepage = () => {
   return (
       <Div
       m={{b: "2rem" }}
       bg="gray200"
-      h="200vh"
+      h="auto"
+      p={{b:'1em'}}
       >
         <Spacer/>
         <ProfileCard/>
@@ -27,6 +29,7 @@ const Homepage = () => {
           Website đang trong giai đoạn phát triển!
         </Div>
         <Spacer/>
+        <Contact/>
       </Div>
     )
 }
