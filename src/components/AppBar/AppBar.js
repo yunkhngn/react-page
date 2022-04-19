@@ -91,7 +91,7 @@ const AppBar = ({
             icon="fas fa-angle-up icon"
             name="Menu"
             theme={theme}
-            onClicked={scrollToTop}
+            clickHandler={scrollToTop}
           />
         </div>
       </div>
