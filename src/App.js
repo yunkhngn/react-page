@@ -5,13 +5,15 @@ import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
+import Maintenance from "./components/Maintenance/Maintenance";
+import Notifications from "./components/Notifications/Notifications";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";
 import Picturepage from "./Page/Picturepage/Picturepage";
 import Projectpage from "./Page/Projectpage/Projectpage";
 import Notfound from "./Page/Notfound/Notfound";
-import Maintenance from "./components/Maintenance/Maintenance";
+import Playground from "./Page/Playground/Playground";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
@@ -155,6 +157,7 @@ function App() {
   else{
   return (
     <div className={"App App" + theme}>
+      <Notifications kind={true} message="Your are visiting my site!" />
       <div className="AppPage">
 
         <div className="HeaderPage" id="top">
@@ -173,6 +176,7 @@ function App() {
           <Route path="/about" element={<Aboutpage/>} />
           <Route path="/picture" element={<Picturepage/>} />
           <Route path="/projects" element={<Projectpage/>} />
+          <Route path="/playground" element={<Playground/>} />
         </Routes>
       </BrowserRouter>
         </div>
