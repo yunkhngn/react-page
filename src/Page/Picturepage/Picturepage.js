@@ -11,7 +11,9 @@ const Picturepage = () => {
             <meta id="og-title" property="og:title" content="Khoa Nguyễn - Pictures" />
             <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
       </MetaTags>
-      This is the picture page!
+      <Div>
+        This is the picture page
+      </Div>
     </Div>
   )
 }

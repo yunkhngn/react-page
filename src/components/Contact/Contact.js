@@ -31,7 +31,7 @@ const Contact = () => {
             setDateNow(getCurrentDate());
         }, 1000);
     }, [])
-
+    
     const submit = () => {
       if (name === '' || email === '' || phone === '' || subject === '' || message === '') {
         alert('Please fill all the fields');
