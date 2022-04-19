@@ -11,7 +11,7 @@ const Projectpage = () => {
             <meta id="og-title" property="og:title" content="Khoa Nguyễn - Projects" />
             <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
       </MetaTags>
-      This is the picture page!
+      This is the projects page!
     </Div>
   )
 }
