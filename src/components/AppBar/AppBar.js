@@ -10,10 +10,13 @@ const openURL = (url) => {
   }, 750);
 };
 
-const scrollTo = () => {
-  setTimeout(() => {
-    window.scrollTo(0, 0)
-  }, 750);
+const scrollToTop = () =>{
+  window.scrollTo({
+    top: 0, 
+    behavior: 'smooth'
+    /* you can also use 'auto' behaviour
+       in place of 'smooth' */
+  });
 };
 
 
@@ -88,7 +91,7 @@ const AppBar = ({
             icon="fas fa-angle-up icon"
             name="Menu"
             theme={theme}
-            clickHandler={scrollTo}
+            onClicked={scrollToTop}
           />
         </div>
       </div>

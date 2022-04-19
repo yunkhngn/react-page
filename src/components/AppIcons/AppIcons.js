@@ -3,7 +3,7 @@ import React from "react";
 import "./AppIcons.css";
 
 
-const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url }) => {
+const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url, onClicked}) => {
   const [bounce, setBounce] = React.useState(false);
 
   const changeHandler = (url) => {
@@ -24,6 +24,7 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url })
           className={icon + " AppIcon" + theme}
           onClick={() => {
             changeHandler();
+            onClicked();
             clickHandler();
             if(url) {
             window.history.pushState(null, null, url);
