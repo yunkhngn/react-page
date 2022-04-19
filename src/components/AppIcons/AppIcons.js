@@ -24,7 +24,6 @@ const AppIcons = ({ icon, name, theme, showDot, setShowDot, clickHandler, url, o
           className={icon + " AppIcon" + theme}
           onClick={() => {
             changeHandler();
-            onClicked();
             clickHandler();
             if(url) {
             window.history.pushState(null, null, url);
