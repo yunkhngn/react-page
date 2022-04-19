@@ -11,12 +11,8 @@ const openURL = (url) => {
 };
 
 const scrollTo = () => {
-  var id = "top"
   setTimeout(() => {
-    window.scrollTo({
-      top: document.querySelector(id).offsetTop,
-      behavior: "smooth",
-    });
+    window.scrollTo(0, 0)
   }, 750);
 };
 
