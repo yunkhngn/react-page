@@ -157,7 +157,7 @@ function App() {
   else{
   return (
     <div className={"App App" + theme}>
-      <Notifications kind={true} message="Your are visiting my site!" />
+      {/* <Notifications kind={true} message="Your are visiting my site!" /> */}
       <div className="AppPage">
 
         <div className="HeaderPage" id="top">
