@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./App.css";
+import { ThemeProvider, Div } from "atomize";
 
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
@@ -128,6 +129,7 @@ function App() {
   ];
 
   const changeTheme = () => {
+
     if (theme === "light") {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
@@ -156,9 +158,10 @@ function App() {
   else{
   return (
     <div className={"App App" + theme}>
+
       {/* <Notifications kind={true} message="Your are visiting my site!" /> */}
       <div className="AppPage">
-
+      <Div bg="gray200" rounded='10px'>
         <div className="HeaderPage" id="top">
           <div className="dotnav"/>
           <div className="dotnav yellow"/>
@@ -179,7 +182,17 @@ function App() {
         </Routes>
       </BrowserRouter>
         </div>
+        <Div
+        bg='gray200'
+        h="100%"
+        justify="center"
+        align="center"
+        rounded={{b: "10px"}}
+        p={{b: "10px"}}
+        >
         <Footer/>
+        </Div>
+        </Div>
       </div>
       <AppHeader/>
       <AppBar

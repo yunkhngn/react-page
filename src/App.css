@@ -34,19 +34,23 @@
 
 .AppPage{
   height: auto;
-  padding-bottom: 2em;
-
   width: 60vw;
   margin: 5em auto;    
-
-  background-color:antiquewhite;
   border-radius: 10px;
-  background: #f7f8f9;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  
 }
+
+.Pagelight{
+  background: #f7f8f9;
+}
+
+.Pagedark{
+  background: #1d1d1d;
+}
+
+
 .HeaderPage{
   width: auto;
   height: 20px;

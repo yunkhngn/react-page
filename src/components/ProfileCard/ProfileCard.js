@@ -13,7 +13,6 @@ const downloadCV = () => {
   window.open(CV, '_blank');
   
 }
-
 const ProfileCard = () => {
   return (
     <Div
