@@ -22,18 +22,18 @@ const Homepage = () => {
 
   return (
     <ThemeProvider theme={themeSetup}>
+    <MetaTags>
+            <title>Khoa Nguyễn - Home</title>
+            <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
+            <meta id="og-title" property="og:title" content="Khoa Nguyễn - Home" />
+            <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
+    </MetaTags>  
     <Div
       m={{b: "2rem" }}
       bg="gray200"
       h="auto"
       p={{b:'1em'}}
       >
-        <MetaTags>
-            <title>Khoa Nguyễn - Home</title>
-            <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
-            <meta id="og-title" property="og:title" content="Khoa Nguyễn - Home" />
-            <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
-        </MetaTags>
         <Spacer/>
         <ProfileCard/>
         <Spacer/>
