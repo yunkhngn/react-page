@@ -6,7 +6,6 @@ import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
 import Maintenance from "./components/Maintenance/Maintenance";
-import Notifications from "./components/Notifications/Notifications";
 
 import Homepage from "./Page/Homepage/Homepage";
 import Aboutpage from "./Page/Aboutpage/Aboutpage";

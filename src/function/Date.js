@@ -21,4 +21,6 @@ const Date = () => {
     return dateNow
 }
 
-export default Date;
+export default function Date() {
+    return dateNow;
+}

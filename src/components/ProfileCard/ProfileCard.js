@@ -3,13 +3,12 @@ import { Div, Text, Image, Button, Icon
 } from "atomize";
 import Avatar from '../../assets/avatar.png';
 import CV from '../../assets/Khoa Nguyen CV.pdf';
+import SocialLink from '../SocialLink/SocialLink';
 
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
 }
-const openMessenger = () => {
-  window.open('https://m.me/yun.khngn', '_blank');
-}
+
 const downloadCV = () => {
   window.open(CV, '_blank');
   
@@ -31,10 +30,17 @@ const ProfileCard = () => {
           <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
           <Text textSize="paragraph" textColor="gray900"  maxW="25em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">"Tương lai thuộc về những người tin vào vẻ đẹp trong chính những giấc mơ, hoài bão to lớn của mình..."</Text>
           <Div
+            d="flex"
+            justify="center"
+            m={{b:'1em',t:'1em'}}
+          >
+            <SocialLink />
+          </Div>
+          <Div
           d="flex"
           justify="center"
           m={{t: "1rem"}}
-          >
+          > 
              <Button
               suffix={
               <Icon
@@ -69,17 +75,6 @@ const ProfileCard = () => {
               p={{ r: "1rem", l: "1rem" }}
               onClick={downloadCV}
               >Resume</Button>
-              <Button
-              h="2.5rem"
-              w="2.5rem"
-              bg="success300"
-              hoverBg="success400"
-              rounded="circle"
-              m={{ l: "0.5rem" }}
-              onClick={openMessenger}
-              >
-              <Icon name="MessageSolid" size="20px" color="success700" />
-             </Button>
           </Div>
         </Div>
   )

@@ -30,7 +30,12 @@ const Contact = () => {
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-        return `${hour}:${minutes} | ${day}/${month}/${year}`;
+        if (minutes < 10) {
+          return `${hour}:0${minutes} | ${day}/${month}/${year}`;
+        } else {
+          return `${hour}:${minutes} | ${day}/${month}/${year}`;
+        }
+
     }
     const [dateNow, setDateNow] = React.useState(getCurrentDate());
 
