@@ -20,13 +20,11 @@ const themeSetup = {
 
 const Homepage = () => {
 
-  const [themeSet, setThemeSet] = React.useState(themeSetup.light);
-  
   return (
     <ThemeProvider theme={themeSetup}>
     <Div
       m={{b: "2rem" }}
-      bg={themeSet.bg}
+      bg="gray200"
       h="auto"
       p={{b:'1em'}}
       >

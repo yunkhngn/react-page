@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./App.css";
-import { ThemeProvider, Div } from "atomize";
+import { Div } from "atomize";
 
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
