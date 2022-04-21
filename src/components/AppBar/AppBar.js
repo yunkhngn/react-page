@@ -27,7 +27,6 @@ const AppBar = ({
   changeTheme,
   dotLocation,
 }) => {
-
   return (
     <div className="container">
       <div className="AppBar">
@@ -55,7 +54,7 @@ const AppBar = ({
               setShowDot={item.setShowDot}
               url = {item.url}
               clickHandler={() => {
-                item.open();
+                window.history.pushState("", "", item.url);;
               }}
             />
           ))}

@@ -24,18 +24,22 @@
   overflow: visible;
 }
 
+@media screen and (max-width: 650px) {
+  .icon:hover{
+    transform: none;
+    margin: 0px;
+  }
+}
+
 @keyframes clicked {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) ease-in;
   }
-  40% {
-    transform: translateY(-35px);
-  }
-  80% {
-    transform: translateY(3px);
+  50% {
+    transform: translateY(-40px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) ease-out;
   }
 }
 
