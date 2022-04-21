@@ -31,7 +31,7 @@ const AppBar = ({
   return (
     <div className="container">
       <div className="AppBar">
-        <div className="section ">
+        <div className="section">
           <AppIcons
             icon="fas fa-home icon"
             name="Home"

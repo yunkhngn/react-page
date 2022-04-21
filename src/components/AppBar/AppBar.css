@@ -9,15 +9,19 @@
   left: 50%;
   transform: translateX(-50%);
   object-fit: contain;
+  align-items: center;
 }
 
 .AppBar {
+  display: flex;
+  justify-content: center;
+
   padding: 3px;
   width: auto;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   border-radius: 16px;
   background: rgba(83, 83, 83, 0.25);
   backdrop-filter: blur(13px);
@@ -32,13 +36,10 @@
   align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .AppBar {
-    transform: scale(0.6);
-    bottom: 0;
-  }
-
-  .container {
-    bottom: 0;
+    overflow: auto hidden;
+    width: 90%;
+    margin:auto;
   }
 }

@@ -21,6 +21,7 @@
 
 .bounce {
   animation: clicked 0.75s infinite;
+  overflow: visible;
 }
 
 @keyframes clicked {
