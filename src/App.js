@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import "./App.css";
 import { Div } from "atomize";
 
@@ -7,15 +7,14 @@ import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
 import Maintenance from "./components/Maintenance/Maintenance";
-
-import Homepage from "./Page/Homepage/Homepage";
-import Aboutpage from "./Page/Aboutpage/Aboutpage";
-import Picturepage from "./Page/Picturepage/Picturepage";
-import Projectpage from "./Page/Projectpage/Projectpage";
-import Notfound from "./Page/Notfound/Notfound";
-import Playground from "./Page/Playground/Playground";
-
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+const Homepage = lazy(() => import("./Page/Homepage/Homepage"));
+const Aboutpage = lazy(() => import("./Page/Aboutpage/Aboutpage"));
+const Picturepage = lazy(() => import("./Page/Picturepage/Picturepage"));
+const Projectpage = lazy(() => import("./Page/Projectpage/Projectpage"));
+const Notfound = lazy(() => import("./Page/Notfound/Notfound"));
+const Playground = lazy(() => import("./Page/Playground/Playground"));
 
 const socialMedia = [
   {
@@ -154,8 +153,8 @@ function App() {
   if (process.env.NODE_ENV === getMaintenanceStatus()){
     return <Maintenance/> 
   }
-
   else{
+  
   return (
     <div className={"App App" + theme}>
 
@@ -171,15 +170,17 @@ function App() {
         <div className="ContainerText">
         
         <BrowserRouter>
+        <Suspense fallback={null}>
         <Routes>
           <Route path='*' element={<Notfound/>} />
           <Route path="/" element={<Homepage/>}/>
           <Route path="/home" element={<Homepage/>}/>
-          <Route path="/about" element={<Aboutpage/>} />
+          <Route path="/about"   element={<Aboutpage/>} />
           <Route path="/picture" element={<Picturepage/>} />
           <Route path="/projects" element={<Projectpage/>} />
           <Route path="/playground" element={<Playground/>} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
         </div>
         <Div
