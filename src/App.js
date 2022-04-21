@@ -50,6 +50,7 @@ function App() {
   const [showAboutDot, setShowAboutDot] = useState(false);
   const [showProjectsDot, setShowProjectsDot] = useState(false);
   const [showPictureDot, setShowPictureDot] = useState(false);
+
   console.log(page)
   useEffect(() => {
     //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
@@ -133,7 +134,7 @@ function App() {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
       setTheme("dark");
-      sessionStorage.setItem("themeCheck", 'dark');
+      sessionStorage.setItem("themeCheck", "dark");
     } else {
       document.body.classList.remove();
       document.body.classList.add("Applight");
@@ -149,7 +150,6 @@ function App() {
       return "production";
     }
   }
-
   if (process.env.NODE_ENV === getMaintenanceStatus()){
     return <Maintenance/> 
   }
@@ -157,7 +157,6 @@ function App() {
   
   return (
     <div className={"App App" + theme}>
-
       {/* <Notifications kind={true} message="Your are visiting my site!" /> */}
       <div className="AppPage">
       <Div bg="gray200" rounded='10px'>
@@ -170,9 +169,9 @@ function App() {
         <div className="ContainerText">
         
         <BrowserRouter>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Div>Loading page...</Div>}>
         <Routes>
-          <Route path='*' element={<Notfound/>} />
+          <Route exact path='*' element={<Notfound />} />
           <Route path="/" element={<Homepage/>}/>
           <Route path="/home" element={<Homepage/>}/>
           <Route path="/about"   element={<Aboutpage/>} />

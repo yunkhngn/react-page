@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Div, Text, Image, Button, Icon
 } from "atomize";
 import Avatar from '../../assets/Illustrate.svg';
@@ -13,7 +13,22 @@ const downloadCV = () => {
   window.open(CV, '_blank');
   
 }
+
 const ProfileCard = () => {
+  const [quote, setQuote] = useState('');
+  
+  const getQuoteFromAPI = () => {
+   const url = 'https://api.quotable.io/random';
+   fetch(url)
+     .then(response => response.json())
+      .then(data => {
+        setQuote(data.content);
+      })
+     .catch(error => console.log(error));
+  }
+  useEffect(() => {
+    getQuoteFromAPI();
+  }, []);
   return (
     <Div
         bg='white'
@@ -27,7 +42,7 @@ const ProfileCard = () => {
           <Image className="image" src={Avatar} w={{ xs: "60%", md: "20%" }} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle"/>
           <Text textSize="heading" textWeight="600">Khoa Nguyễn</Text>
           <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
-          <Text textSize="paragraph" textColor="gray900"  maxW="25em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">"Tương lai thuộc về những người tin vào vẻ đẹp trong chính những giấc mơ, hoài bão to lớn của mình..."</Text>
+          <Text textSize="paragraph" textColor="gray900" overflow="" maxW="30em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">{quote}</Text>
           <Div
             d="flex"
             justify="center"
