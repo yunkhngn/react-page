@@ -1,16 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import MetaTags from 'react-meta-tags';
-import { Div } from "atomize";
-
+import { Div, Row, Col } from "atomize";
+import PostProps from '../../components/PostProps/PostProps';
+import Spacer from '../../components/Spacer/Spacer';
 const Picturepage = () => {
-  const [counter, setCounter] = useState(2);
-
-  if (counter === 3) {
-    throw new Error("Oops, You triggered Doomsday!");
-  }
-  const countUntilDoom = () => {
-    setCounter(counter + 1);
-  };
   return (
     <Div>
       <MetaTags>
@@ -19,13 +12,52 @@ const Picturepage = () => {
             <meta id="og-title" property="og:title" content="Khoa Nguyễn - Pictures" />
             <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
       </MetaTags>
-      <Div>
-      <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <button onClick={countUntilDoom}>Click on me for money</button>
-      <h2>{counter}</h2>
-      </div>
+      <Div
+      m={{b: "2rem" }}
+      bg="gray200"
+      h="auto"
+      p={{b:'1em'}}
+      >
+        <Div
+        bg='white'
+        w='90%'
+        m={{t:'1em', l:'auto', r:'auto'}}
+        p="2em"
+        h="100%"
+        border="1px solid"
+        borderColor="gray300"
+        rounded="xl"
+        >
+          <Row>
+            <Col size={{ xs: 12, md: 6 }}>
+              <PostProps/>
+              <Div d={{md:'none'}}>
+                <Spacer/>
+              </Div>
+            </Col>
+            <Col size={{ xs: 12, md: 6 }}>
+              <PostProps/>
+              <Div d={{md:'none'}}>
+                <Spacer/>
+              </Div>
+            </Col>
+          </Row>
+          <Spacer/>
+          <Row>
+            <Col size={{ xs: 12, md: 6 }}>
+              <PostProps/>
+              <Div d={{md:'none'}}>
+                <Spacer/>
+              </Div>
+            </Col>
+            <Col size={{ xs: 12, md: 6 }}>
+              <PostProps/>
+              <Div d={{md:'none'}}>
+                <Spacer/>
+              </Div>
+            </Col>
+          </Row>
+        </Div>  
       </Div>
     </Div>
   )

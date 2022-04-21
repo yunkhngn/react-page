@@ -8,6 +8,7 @@ import AppHeader from "./components/AppHeader/AppHeader";
 import Footer from "./components/Footer/Footer";
 import Maintenance from "./components/Maintenance/Maintenance";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Spacer from "./components/Spacer/Spacer";
 
 const Homepage = lazy(() => import("./Page/Homepage/Homepage"));
 const Aboutpage = lazy(() => import("./Page/Aboutpage/Aboutpage"));
@@ -156,7 +157,7 @@ function App() {
   else{
   
   return (
-    <div className={"App App" + theme}>
+    <div className={"App" + theme}>
       {/* <Notifications kind={true} message="Your are visiting my site!" /> */}
       <div className="AppPage">
       <Div bg="gray200" rounded='10px'>
@@ -203,6 +204,7 @@ function App() {
         dotLocation={dotLocation}
         setDotLocation={setDotLocation}
       />
+      <Spacer/>
     </div>
   );
   }
