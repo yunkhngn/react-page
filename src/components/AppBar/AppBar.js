@@ -8,7 +8,7 @@ const useAudio = url => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(false);
   const toggle = () => { setPlaying(!playing); };
-  
+
   useEffect(() => {
     audio.volume = 0.3;
     playing ? audio.play() : audio.pause();
@@ -39,7 +39,7 @@ const AppBar = ({
   url,
 }) => {
   const [playing, toggle] = useAudio(url);
-
+  
   return (
     <div className="container">
       <div className="AppBar">
