@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import React from "react";
+import React, {Suspense} from "react";
 import "./App.css";
 import { Div } from "atomize";
 
@@ -123,6 +123,7 @@ function App() {
   else{
   return (
     <div className={"App App" + theme}>
+      <Suspense fallback={null}>
       <div className="AppPage">
       <Div bg="gray200" rounded='10px'>
         <div className="HeaderPage" id="top">
@@ -150,6 +151,7 @@ function App() {
         </Div>
         </Div>
       </div>
+      </Suspense>
       <AppHeader/>
       <AppBar
         websiteOptions={websiteOptions}

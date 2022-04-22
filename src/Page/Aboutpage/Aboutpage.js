@@ -6,14 +6,11 @@ import MetaTags from 'react-meta-tags';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
-import {motion} from 'framer-motion/dist/framer-motion'
+import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 
 const Aboutpage = () => {
   return (
-    <motion.div className="Aboutpage" 
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      exit={{opacity:0}}>
+    <AnimationTag>
       <MetaTags>
             <title>Khoa Nguyễn - About</title>
             <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
@@ -43,7 +40,7 @@ const Aboutpage = () => {
         <Spacer/>
         <Contact/>
       </Div>
-      </motion.div>
+      </AnimationTag>
   )
 }
 

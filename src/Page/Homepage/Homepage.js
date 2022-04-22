@@ -1,32 +1,17 @@
 import React from 'react'
 import { Div, ThemeProvider, Button, Icon
-        } from "atomize";
+} from "atomize";
 
 import MetaTags from 'react-meta-tags';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
-import { motion} from 'framer-motion/dist/framer-motion'
-
-const themeSetup = {
-  light: {
-    bg:"gray200",
-    textColor:"black",
-  },
-  dark: {
-    bg:"gray900",
-    textColor:"white",
-  },
-}
+import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 
 const Homepage = () => {
   return (
-    <motion.div
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      exit={{opacity:0}}
-    >
-    <ThemeProvider theme={themeSetup}>
+    <AnimationTag>
+    <ThemeProvider>
     <MetaTags>
             <title>Khoa Nguyễn - Home</title>
             <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
@@ -69,7 +54,7 @@ const Homepage = () => {
         <Contact/>
       </Div>
     </ThemeProvider>
-    </motion.div>
+    </AnimationTag>
     )
 }
 
