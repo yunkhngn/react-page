@@ -3,8 +3,15 @@ import MetaTags from 'react-meta-tags';
 import { Div, Row, Col } from "atomize";
 import PostProps from '../../components/PostProps/PostProps';
 import Spacer from '../../components/Spacer/Spacer';
+import { motion } from "framer-motion";
+
 const Picturepage = () => {
   return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
     <Div>
       <MetaTags>
             <title>Khoa Nguyễn - Pictures</title>
@@ -60,6 +67,7 @@ const Picturepage = () => {
         </Div>  
       </Div>
     </Div>
+    </motion.div>
   )
 }
 

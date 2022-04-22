@@ -6,6 +6,7 @@ import MetaTags from 'react-meta-tags';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
+import { motion} from 'framer-motion/dist/framer-motion'
 
 const themeSetup = {
   light: {
@@ -19,8 +20,12 @@ const themeSetup = {
 }
 
 const Homepage = () => {
-
   return (
+    <motion.div
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      exit={{opacity:0}}
+    >
     <ThemeProvider theme={themeSetup}>
     <MetaTags>
             <title>Khoa Nguyễn - Home</title>
@@ -33,6 +38,7 @@ const Homepage = () => {
       bg="gray200"
       h="auto"
       p={{b:'1em'}}
+      transition="all 0.4s ease-in-out"
       >
         <Spacer/>
         <ProfileCard/>
@@ -63,6 +69,7 @@ const Homepage = () => {
         <Contact/>
       </Div>
     </ThemeProvider>
+    </motion.div>
     )
 }
 
