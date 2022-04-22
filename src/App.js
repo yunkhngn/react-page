@@ -10,6 +10,7 @@ import Maintenance from "./components/Maintenance/Maintenance";
 import {BrowserRouter} from "react-router-dom";
 import Spacer from "./components/Spacer/Spacer";
 import AnimatedPage from "./components/AnimatedPage/AnimatedPage";
+import Audio from "./assets/audio/tayto.mp3";
 
 const socialMedia = [
   {
@@ -95,7 +96,7 @@ function App() {
       url: "/picture",
     },
   ];
-
+  const url = Audio;
   const changeTheme = () => {
 
     if (theme === "light") {
@@ -158,6 +159,7 @@ function App() {
         socialMedia={socialMedia}
         theme={theme}
         changeTheme={changeTheme}
+        url={url}
       />
       <Spacer/>
     </div>

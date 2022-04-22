@@ -10,7 +10,6 @@ import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 const debug =
   process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
-
 // 1. Create a client engine instance
 const engine = new Styletron();
 
