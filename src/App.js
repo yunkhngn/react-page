@@ -44,9 +44,20 @@ const socialMedia = [
   },
 ];
 
+function someMethodIThinkMightBeSlow() {
+  const startTime = performance.now();
+
+  // Do the normal stuff for this function
+
+  const duration = performance.now() - startTime;
+  console.log(`Loading methods took ${duration}ms`);
+}
+
 function App() {
   const [theme, setTheme] = useState('light');
+  
   useEffect(() => {
+    someMethodIThinkMightBeSlow();
     //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
     var themeCheck = sessionStorage.getItem("themeCheck");
     if (themeCheck == null) {
@@ -109,7 +120,6 @@ function App() {
 
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
-    console.log("Website is on Maintenance?:", data.is_on_maintenance)
     if (data.is_on_maintenance === true) {
       return "production";
     }
@@ -118,7 +128,6 @@ function App() {
     return <Maintenance/> 
   }
   else{
-  
   return (
     <div className={"App App" + theme}>
       <div className="AppPage">

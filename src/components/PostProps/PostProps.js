@@ -32,12 +32,10 @@ const PostProps = () => {
     const Hearted = () => {
         if (isHearted === false) {
             setIsHearted(true);
-            console.log("I love you!!!")
         } else {
             setIsHearted(false);
-            console.log("Oops!!!")
         }
-        };
+    };
 
     return (
     <Div>
@@ -53,7 +51,7 @@ const PostProps = () => {
                 <Image src={Avatar} rounded={{t:"xl"}} w={{xs:"7%", lg:"10%"}} h={{xs:"5%", lg:"10%"}} m={{r:"1em", l:"1em", b:"0.5em"}}></Image>
                 <Text textSize="paragraph" textWeight="500" m={{b:'0.5em'}} >A rainy day...</Text>
                 </Div>
-                <Icon name={isHearted ? "HeartSolid" : "Heart"} color={isHearted ? "danger700" : "gray800"} size="1em" m={{b:'0.5em',r:'0.5em'}} onClick={Hearted} disable={isHearted}></Icon>
+                <Icon name={isHearted ? "HeartSolid" : "Heart"} color={isHearted ? "danger700" : "gray800"} size="1em" m={{b:'0.5em',r:'0.5em'}} onClick={Hearted}></Icon>
             </Div>
       </Div>
       <Div 
