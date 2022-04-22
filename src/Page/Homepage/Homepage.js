@@ -15,7 +15,7 @@ const Homepage = () => {
     <ThemeProvider>
     <MetaTags>
             <title>Khoa Nguyễn - Home</title>
-            <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
+            <meta id="meta-description" name="description" content="Khoa Nguyen is a software engineer in Hanoi, Vietnam. He enjoys building software with Reactjs and dealing with algorithms and data structures." />
             <meta id="og-title" property="og:title" content="Khoa Nguyễn - Home" />
             <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
     </MetaTags>  
