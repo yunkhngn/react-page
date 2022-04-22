@@ -9,7 +9,6 @@ import Footer from "./components/Footer/Footer";
 import Maintenance from "./components/Maintenance/Maintenance";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Spacer from "./components/Spacer/Spacer";
-import Notifications from "./components/Notifications/Notifications";
 
 const Homepage = lazy(() => import("./Page/Homepage/Homepage"));
 const Aboutpage = lazy(() => import("./Page/Aboutpage/Aboutpage"));
@@ -47,13 +46,6 @@ const socialMedia = [
 
 function App() {
   const [theme, setTheme] = useState('light');
-  const [page, setPage] = useState(true);
-  const [dotLocation, setDotLocation] = useState("Home");
-  const [showAboutDot, setShowAboutDot] = useState(false);
-  const [showProjectsDot, setShowProjectsDot] = useState(false);
-  const [showPictureDot, setShowPictureDot] = useState(false);
-
-  console.log(page)
   useEffect(() => {
     //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
     var themeCheck = sessionStorage.getItem("themeCheck");
@@ -79,54 +71,24 @@ function App() {
     setTheme(themeCheck)
   }, []);
 
-  const showAboutDotHandler = () => {
-    setShowAboutDot(true);
-    setShowProjectsDot(false);
-    setShowPictureDot(false);
-    setDotLocation("About");
-  };
-
-  const showProjectsDotHandler = () => {
-    setShowAboutDot(false);
-    setShowProjectsDot(true);
-    setShowPictureDot(false);
-    setDotLocation("Projects");
-  };
-
-  const showPictureDotHandler = () => {
-    setShowAboutDot(false);
-    setShowProjectsDot(false);
-    setShowPictureDot(true);
-    setDotLocation("Picture");
-  };
-
   const websiteOptions = [
     {
       id: 1,
       name: "About",
       icon: "fas fa-address-card icon",
       url: "/about",
-      open: () => setPage(true),
-      showDot: showAboutDot,
-      setShowDot: showAboutDotHandler,
     },
     {
       id: 2,
       name: "Projects",
       icon: "fas fa-lightbulb icon",
       url: "/projects",
-      open: () => console.log("Projects"),
-      showDot: showProjectsDot,
-      setShowDot: showProjectsDotHandler,
     },
     {
       id: 3,
       name: "Picture",
       icon: "fas fa-camera icon",
       url: "/picture",
-      open: () => console.log("Picture"),
-      showDot: showPictureDot,
-      setShowDot: showPictureDotHandler,
     },
   ];
 
@@ -159,7 +121,6 @@ function App() {
   
   return (
     <div className={"App App" + theme}>
-      <Notifications kind={true} message="Your are visiting my site!" />
       <div className="AppPage">
       <Div bg="gray200" rounded='10px'>
         <div className="HeaderPage" id="top">
@@ -202,8 +163,6 @@ function App() {
         socialMedia={socialMedia}
         theme={theme}
         changeTheme={changeTheme}
-        dotLocation={dotLocation}
-        setDotLocation={setDotLocation}
       />
       <Spacer/>
     </div>

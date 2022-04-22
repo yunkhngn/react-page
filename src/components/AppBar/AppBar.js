@@ -25,7 +25,6 @@ const AppBar = ({
   socialMedia,
   theme,
   changeTheme,
-  dotLocation,
 }) => {
   return (
     <div className="container">
@@ -35,13 +34,11 @@ const AppBar = ({
             icon="fas fa-home icon"
             name="Home"
             theme={theme}
-            showDot={true}
             clickHandler={() => {window.history.pushState(null, null, "/"); window.location.reload();}}
           />
         </div>
 
         <Spacer />
-
         <div className="section ">
           {websiteOptions.map((item) => (
             <AppIcons
@@ -49,9 +46,6 @@ const AppBar = ({
               name={item.name}
               key={item.id}
               theme={theme}
-              dotLocation={dotLocation}
-              showDot={item.showDot}
-              setShowDot={item.setShowDot}
               url = {item.url}
               clickHandler={() => {
                 window.history.pushState("", "", item.url);;
@@ -70,7 +64,6 @@ const AppBar = ({
               key={item.id}
               theme={theme}
               clickHandler={() => openURL(item.link)}
-              dotLocation={dotLocation}
             />
           ))}
         </div>
