@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Maintenance from "./components/Maintenance/Maintenance";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Spacer from "./components/Spacer/Spacer";
+import Notifications from "./components/Notifications/Notifications";
 
 const Homepage = lazy(() => import("./Page/Homepage/Homepage"));
 const Aboutpage = lazy(() => import("./Page/Aboutpage/Aboutpage"));
