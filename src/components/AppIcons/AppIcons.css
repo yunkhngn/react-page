@@ -26,8 +26,8 @@
 
 @media screen and (max-width: 650px) {
   .icon:hover{
-    transform: none;
-    margin: 0px;
+    transform: scale(1.2) translateY(-10px);
+    margin: 10px;
   }
 }
 

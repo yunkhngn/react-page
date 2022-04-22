@@ -59,7 +59,6 @@ const Contact = () => {
         rounded="xl"
     >
     <Text textSize="heading" textWeight="600" m={{b:'1em'}}>Contact me</Text>
-    <form netlify>
     <Row>
     <Col size={{ xs: 12, lg: 3 }}>
       <Div>
@@ -82,7 +81,6 @@ const Contact = () => {
       <PostProps />
     </Col>
     </Row>
-    </form>
     </Div>
   )
 }

@@ -4,6 +4,7 @@ import { Div, Text, Image, Button, Icon
 import Avatar from '../../assets/Illustrate.svg';
 import CV from '../../assets/Khoa Nguyen CV.pdf';
 import SocialLink from '../SocialLink/SocialLink';
+import 'react-medium-image-zoom/dist/styles.css'
 
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
@@ -25,7 +26,7 @@ const ProfileCard = () => {
         borderColor="gray300"
         rounded="xl"
         >
-          <Image className="image" src={Avatar} w={{ xs: "60%", md: "20%" }} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle"/>
+          <Image src={Avatar} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle" m="auto" w={{ xs: "60%", md: "20%" }}/>
           <Text textSize="heading" textWeight="600">Khoa Nguyễn</Text>
           <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
           <Text textSize="paragraph" textColor="gray900" overflow="" maxW="20em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">Những ước mơ không chết chừng nào bạn còn nuôi dưỡng nó bằng niềm đam mê.</Text>
