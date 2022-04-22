@@ -4,7 +4,6 @@ import { Div, Text, Image, Button, Icon
 import Avatar from '../../assets/Illustrate.svg';
 import CV from '../../assets/Khoa Nguyen CV.pdf';
 import SocialLink from '../SocialLink/SocialLink';
-import 'react-medium-image-zoom/dist/styles.css'
 
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
