@@ -32,7 +32,6 @@
 
 .App {
   transition: background-image 1s;
-  transition-timing-function: ease-in-out;
 }
 
 .AppPage{
