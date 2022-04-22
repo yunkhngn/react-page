@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from 'react-meta-tags';
+import MetaTag from '../../components/MetaTag/MetaTag';
 import { Div, Row, Col } from "atomize";
 import PostProps from '../../components/PostProps/PostProps';
 import Spacer from '../../components/Spacer/Spacer';
@@ -8,13 +8,8 @@ import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 const Picturepage = () => {
   return (
     <AnimationTag>
+    <MetaTag titlePage="Pictures"/>
     <Div>
-      <MetaTags>
-            <title>Khoa Nguyễn - Pictures</title>
-            <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
-            <meta id="og-title" property="og:title" content="Khoa Nguyễn - Pictures" />
-            <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
-      </MetaTags>
       <Div
       m={{b: "2rem" }}
       bg="gray200"

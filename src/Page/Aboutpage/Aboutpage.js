@@ -2,21 +2,16 @@ import React from 'react'
 import { Div
 } from "atomize";
 
-import MetaTags from 'react-meta-tags';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
+import MetaTag from '../../components/MetaTag/MetaTag';
 
 const Aboutpage = () => {
   return (
     <AnimationTag>
-      <MetaTags>
-            <title>Khoa Nguyễn - About</title>
-            <meta id="meta-description" name="description" content="Website vippzo nhất hệ mặt trời!" />
-            <meta id="og-title" property="og:title" content="Khoa Nguyễn - About" />
-            <meta id="og-image" property="og:image" content="../../assets/macos-big-sur.jpg" />
-      </MetaTags>
+      <MetaTag titlePage="About"/>
       <Div
       m={{b: "2rem" }}
       bg="gray200"
