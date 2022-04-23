@@ -3,7 +3,7 @@ import React from "react";
 import "./AppIcons.css";
 
 
-const AppIcons = ({ icon, name, theme, showDot}) => {
+const AppIcons = ({icon, name, theme, showDot}) => {
   const [bounce, setBounce] = React.useState(false);
 
   const changeHandler = (url) => {

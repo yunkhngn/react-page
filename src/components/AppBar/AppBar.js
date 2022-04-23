@@ -58,7 +58,7 @@ const AppBar = ({
         <Spacer />
         <div className="section ">
           {websiteOptions.map((item) => (
-            <Link to={item.url} className="section">
+            <Link key={item.id} to={item.url} className="section">
             <AppIcons
               icon={item.icon}
               name={item.name}
