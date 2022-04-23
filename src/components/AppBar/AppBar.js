@@ -47,10 +47,11 @@ const AppBar = ({
         <div>
           <Link to="/" className="section">
           <AppIcons
-            icon="fas fa-home icon"
+            icon="fab fa-apple icon"
             name="Home"
             theme={theme}
             url="/"
+            alt="Home"
           />
           </Link>
         </div>
@@ -65,6 +66,7 @@ const AppBar = ({
               key={item.id}
               theme={theme}
               url={item.url}
+              alt={item.name}
             />
             </Link>
           ))}
@@ -80,6 +82,7 @@ const AppBar = ({
               key={item.id}
               theme={theme}
               clickHandler={() => openURL(item.link)}
+              alt={item.name}
             />
           ))}
         </div>
@@ -92,6 +95,7 @@ const AppBar = ({
             name="Change Theme"
             theme={theme}
             clickHandler={changeTheme}
+            alt="Change Theme"
           />
         </div>
         <div className="section">
@@ -100,6 +104,7 @@ const AppBar = ({
             name="Menu"
             theme={theme}
             clickHandler={toggle}
+            alt="Menu"
           />
         </div>
       </div>

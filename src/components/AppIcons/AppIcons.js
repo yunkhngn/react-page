@@ -3,7 +3,7 @@ import {Icon} from 'atomize'
 import "./AppIcons.css";
 import { useLocation } from "react-router-dom";
 
-const AppIcons = ({icon, name, theme, clickHandler, url}) => {
+const AppIcons = ({icon, name, theme, clickHandler, url, alt}) => {
   const [bounce, setBounce] = React.useState(false);
   const changeHandler = (url) => {
     setBounce(true);
@@ -16,7 +16,7 @@ const AppIcons = ({icon, name, theme, clickHandler, url}) => {
   const displayNav = path === url
   const changeColor = theme === "light"
   return (
-    <div className="IconContainer">
+    <div className="IconContainer" alt={alt}>
       {false && <span className="AppIcon--label">{name}</span>}
       <div
         className={bounce ? "bounce icon2" : "icon2"}

@@ -38,8 +38,8 @@
 
 @media screen and (max-width: 650px) {
   .AppBar {
-    overflow-X:auto;
-    overflow-y:visible;
+    overflow-x:auto;
+    overflow-y:hidden;
     width: 90%;
     margin: auto ;
     justify-content: left;

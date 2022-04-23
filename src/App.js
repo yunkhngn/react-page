@@ -80,7 +80,7 @@ function App() {
     {
       id: 1,
       name: "About",
-      icon: "fas fa-address-card icon",
+      icon: "fas fa-user icon",
       url: "/about",
     },
     {
