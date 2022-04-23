@@ -4,12 +4,14 @@ import { Div, Row, Col } from "atomize";
 import PostProps from '../../components/PostProps/PostProps';
 import Spacer from '../../components/Spacer/Spacer';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
+import Navbutton from '../../components/Navbutton/Navbutton';
 
 const Picturepage = () => {
   return (
     <AnimationTag>
     <MetaTag titlePage="Pictures"/>
-    <Div>
+    <Div
+    >
       <Div
       m={{b: "2rem" }}
       bg="gray200"
@@ -55,7 +57,9 @@ const Picturepage = () => {
               </Div>
             </Col>
           </Row>
-        </Div>  
+        </Div>
+        <Spacer/>
+        <Navbutton/>
       </Div>
     </Div>
     </AnimationTag>

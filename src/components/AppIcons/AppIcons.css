@@ -16,7 +16,7 @@
 }
 
 .seperate {
-  margin: 40px solid red;
+  margin: 40px;
 }
 
 .bounce {
@@ -71,16 +71,6 @@
   justify-content: center;
 }
 
-.dot {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 4px;
-  margin-top: 2px;
-}
-
 .AppIcon--label{
 	display: absolute;
-}
-
-.icon2:hover ~ .dot {
-  display: none;
 }

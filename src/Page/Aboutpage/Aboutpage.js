@@ -7,6 +7,8 @@ import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 import MetaTag from '../../components/MetaTag/MetaTag';
+import Old from '../../components/Old/Old';
+import Navbutton from '../../components/Navbutton/Navbutton';
 
 const Aboutpage = () => {
   return (
@@ -19,21 +21,13 @@ const Aboutpage = () => {
       p={{b:'1em'}}
       >
         <Spacer/>
-        <ProfileCard/>
+          <ProfileCard/>
         <Spacer/>
-        <Div
-        bg='white'
-        w='90%'
-        m='auto'
-        p="2em"
-        border="1px solid"
-        borderColor="gray300"
-        rounded="xl"
-        >
-          Website đang trong giai đoạn phát triển!
-        </Div>
+          <Old/>
         <Spacer/>
-        <Contact/>
+          <Contact/>
+        <Spacer/>
+          <Navbutton/>
       </Div>
       </AnimationTag>
   )

@@ -8,6 +8,7 @@ import Spacer from '../../components/Spacer/Spacer';
 import Contact from '../../components/Contact/Contact';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 import MetaTag from '../../components/MetaTag/MetaTag';
+import Navbutton from '../../components/Navbutton/Navbutton';
 
 const Homepage = () => {
   return (
@@ -19,7 +20,6 @@ const Homepage = () => {
       bg="gray200"
       h="auto"
       p={{b:'1em'}}
-      transition="all 0.4s ease-in-out"
       >
         <Spacer/>
           <ProfileCard/>
@@ -27,6 +27,8 @@ const Homepage = () => {
           <Old/>
         <Spacer/>
           <Contact/>
+        <Spacer/>
+          <Navbutton/>
       </Div>
     </ThemeProvider>
     </AnimationTag>
