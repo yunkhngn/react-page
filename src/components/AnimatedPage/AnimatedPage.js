@@ -11,7 +11,7 @@ const Playground = lazy(() => import("../../Page/Playground/Playground"));
 function AnimatedPage() {
   const location = useLocation();
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
     <Routes location={location} key={location.pathname}>
           <Route exact path='*' element={<Notfound />} status={404}/>
           <Route path="/" element={<Homepage/>}/>

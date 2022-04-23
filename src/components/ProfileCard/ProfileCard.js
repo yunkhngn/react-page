@@ -68,7 +68,7 @@ const ProfileCard = () => {
               }
               textColor="gray900" 
               bg="white"
-              hoverBg="gray00"
+              hoverBg="gray300"
               border="1px solid"
               borderColor="gray500"
               rounded="circle"

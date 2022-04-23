@@ -4,7 +4,7 @@ import { motion} from 'framer-motion/dist/framer-motion'
 const animation = {
     initial: {
       opacity: 0,
-      y: 50,
+      y: 20,
     },
     animate: {
       opacity: 1,
@@ -12,9 +12,15 @@ const animation = {
     },
     exit: {
       opacity: 0,
-      y: 50,
+      y: 20,
     }
   }
+
+const transition = {
+    duration: 0.5,
+    ease: [0.43, 0.13, 0.23, 0.96],
+    type: "tween",
+}
 
 const AnimationTag = ({children}) => {
   return (
@@ -23,7 +29,7 @@ const AnimationTag = ({children}) => {
     initial="initial"
     animate="animate"
     exit="exit"
-    transition={{duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9]}}
+    transition={transition}
     >{children}</motion.div>
   )
 }
