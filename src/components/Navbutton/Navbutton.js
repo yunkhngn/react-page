@@ -27,8 +27,6 @@ const Navbutton = () => {
             setPage('4');
         }
     }, [location.pathname]);
-    console.log(goWhere)
-
     return (
     <Div
     bg='white'
