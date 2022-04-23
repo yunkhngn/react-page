@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Div, Button,Text} from 'atomize'
 import { useLocation, Link } from 'react-router-dom'
-import { useEffect } from 'react';
-
+import Template from '../Template/Template';
 
 const Navbutton = () => {
     const location = useLocation();
@@ -33,21 +32,13 @@ const Navbutton = () => {
         }
     }, [location.pathname]);
     return (
-    <Div
-    bg='white'
-    w='90%'
-    m='auto'
-    p="2em"
-    border="1px solid"
-    borderColor="gray300"
-    rounded="xl"
-    >   
+    <Template>
         <Div m="auto" justify="center" d="flex">
         <Link to={backWhere}><Button bg="gray300" hoverBg="gray400" textColor="dark" >Go back</Button></Link>
         <Text justify="center" m='auto' textSize="subheader" textWeight="500">Page {page}</Text>
         <Link to={goWhere}><Button bg="gray300" hoverBg="gray400" textColor="dark" >Go next</Button></Link>
-    </Div>
-    </Div>
+        </Div>
+    </Template> 
   )
 }
 

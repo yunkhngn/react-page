@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Div, Text, Input, Row, Col, Button, Textarea
 } from "atomize";
 import PostProps from '../PostProps/PostProps';
+import Template from '../Template/Template'
 
 const Contact = () => {
     const [name, setName] = useState(''); 
@@ -49,15 +50,7 @@ const Contact = () => {
       }
     }
   return (
-    <Div
-        bg='white'
-        w='90%'
-        m='auto'
-        p="2em"
-        border="1px solid"
-        borderColor="gray300"
-        rounded="xl"
-    >
+    <Template>
     <Text textSize="heading" textWeight="600" m={{b:'1em'}}>Contact me</Text>
     <Row>
     <Col size={{ xs: 12, lg: 3 }}>
@@ -81,7 +74,7 @@ const Contact = () => {
       <PostProps />
     </Col>
     </Row>
-    </Div>
+    </Template>
   )
 }
 

@@ -4,6 +4,7 @@ import { Div, Text, Image, Button, Icon
 import Avatar from '../../assets/Illustrate.svg';
 import CV from '../../assets/Khoa Nguyen CV.pdf';
 import SocialLink from '../SocialLink/SocialLink';
+import Template from '../Template/Template';
 
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
@@ -16,15 +17,7 @@ const downloadCV = () => {
 
 const ProfileCard = () => {
   return (
-    <Div
-        bg='white'
-        w='90%'
-        m='auto'
-        p="2em"
-        border="1px solid"
-        borderColor="gray300"
-        rounded="xl"
-        >
+    <Template>
           <Image src={Avatar} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle" m="auto" w={{ xs: "60%", md: "20%" }}/>
           <Text textSize="heading" textWeight="600">Khoa Nguyễn</Text>
           <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
@@ -76,7 +69,7 @@ const ProfileCard = () => {
               onClick={downloadCV}
               >Resume</Button>
           </Div>
-        </Div>
+    </Template>
   )
 }
 

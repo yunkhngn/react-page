@@ -5,6 +5,8 @@ const SocialLink = () => {
   return (
     <Div
     d="flex"
+    m="auto"
+    justify="center"
     >
         <Button
               h="2.5rem"

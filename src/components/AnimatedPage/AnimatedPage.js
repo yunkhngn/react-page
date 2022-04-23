@@ -17,7 +17,7 @@ function AnimatedPage() {
           <Route path="/" element={<Homepage/>}/>
           <Route path="/home" element={<Homepage/>}/>
           <Route path="/about"   element={<Aboutpage/>} />
-          <Route path="/picture" element={<Picturepage/>} />
+          <Route path="/pictures" element={<Picturepage/>} />
           <Route path="/projects" element={<Projectpage/>} />
           <Route path="/playground" element={<Playground/>} />
     </Routes>

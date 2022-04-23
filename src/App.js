@@ -93,7 +93,7 @@ function App() {
       id: 3,
       name: "Picture",
       icon: "fas fa-camera icon",
-      url: "/picture",
+      url: "/pictures",
     },
   ];
   const url = Audio;
@@ -136,9 +136,7 @@ function App() {
 
         <div className="ContainerText">
           {/* Tất cả route các thứ nằm ở components này do có animation */}
-          
           <AnimatedPage/>
-          
         </div>
         <Div
         bg='gray200'
