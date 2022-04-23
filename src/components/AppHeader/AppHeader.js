@@ -84,7 +84,7 @@ const AppHeader = () => {
       </div>
 
       {showDropdown && (
-        <div className="drop-down" onmouseOver="dropDown">
+        <div className="drop-down" onMouseOver="dropDown">
           <ul>
             <li>Home</li>
             <hr></hr>

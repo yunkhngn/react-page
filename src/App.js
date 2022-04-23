@@ -123,6 +123,7 @@ function App() {
   }
   else{
   return (
+    <BrowserRouter>
     <div className={"App App" + theme}>
       <Suspense fallback={null}>
       <div className="AppPage">
@@ -134,11 +135,9 @@ function App() {
         </div>
 
         <div className="ContainerText">
-        
-        <BrowserRouter>
           {/* Tất cả route các thứ nằm ở components này do có animation */}
           <AnimatedPage/>
-        </BrowserRouter>
+        
         </div>
         <Div
         bg='gray200'
@@ -163,6 +162,7 @@ function App() {
       />
       <Spacer/>
     </div>
+    </BrowserRouter>
   );
   }
 }

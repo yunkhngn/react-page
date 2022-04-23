@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import AppIcons from "../AppIcons/AppIcons";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import "./AppBar.css";
 
@@ -43,28 +44,28 @@ const AppBar = ({
   return (
     <div className="container">
       <div className="AppBar">
-        <div className="section">
+        <div>
+          <Link to="/" className="section">
           <AppIcons
             icon="fas fa-home icon"
             name="Home"
             theme={theme}
             clickHandler={() => {window.history.pushState(null, null, "/"); window.location.reload();}}
           />
+          </Link>
         </div>
 
         <Spacer />
         <div className="section ">
           {websiteOptions.map((item) => (
+            <Link to={item.url} className="section">
             <AppIcons
               icon={item.icon}
               name={item.name}
               key={item.id}
               theme={theme}
-              url = {item.url}
-              clickHandler={() => {
-                window.history.pushState("", "", item.url);;
-              }}
             />
+            </Link>
           ))}
         </div>
 

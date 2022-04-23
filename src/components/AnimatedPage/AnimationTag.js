@@ -23,7 +23,7 @@ const AnimationTag = ({children}) => {
     initial="initial"
     animate="animate"
     exit="exit"
-    transition={{duration: 1, ease: [0.6, 0.05, -0.01, 0.9]}}
+    transition={{duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9]}}
     >{children}</motion.div>
   )
 }
