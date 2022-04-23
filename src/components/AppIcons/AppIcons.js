@@ -3,7 +3,7 @@ import React from "react";
 import "./AppIcons.css";
 
 
-const AppIcons = ({icon, name, theme, showDot}) => {
+const AppIcons = ({icon, name, theme, showDot, clickHandler}) => {
   const [bounce, setBounce] = React.useState(false);
 
   const changeHandler = (url) => {
@@ -23,6 +23,9 @@ const AppIcons = ({icon, name, theme, showDot}) => {
           className={icon + " AppIcon" + theme}
           onClick={() => {
             changeHandler();
+            if (clickHandler) {
+              clickHandler();
+            }
           }}
         />
       </div>

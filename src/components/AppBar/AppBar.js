@@ -50,7 +50,6 @@ const AppBar = ({
             icon="fas fa-home icon"
             name="Home"
             theme={theme}
-            clickHandler={() => {window.history.pushState(null, null, "/"); window.location.reload();}}
           />
           </Link>
         </div>
@@ -64,6 +63,7 @@ const AppBar = ({
               name={item.name}
               key={item.id}
               theme={theme}
+              
             />
             </Link>
           ))}
