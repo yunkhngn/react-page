@@ -13,7 +13,7 @@ function AnimatedPage() {
   return (
     <AnimatePresence>
     <Routes location={location} key={location.pathname}>
-          <Route exact path='*' element={<Notfound />} />
+          <Route exact path='*' element={<Notfound />} status={404}/>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/home" element={<Homepage/>}/>
           <Route path="/about"   element={<Aboutpage/>} />
