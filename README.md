@@ -8,8 +8,8 @@
 - [x] Sửa giúp anh cái function của cái dropdown, css cho nó ổn áp xíu.
 - [x] Lỗi chuyển trang k giữ theme
 - [x] Thêm cái phần loading trong khi trang đang render.
-- [ ] Dropdown chưa có route
-- [ ] Dot dưới bar chưa fix (code lại đoạn này)
+- [x] Dropdown chưa có route
+- [x] Dot dưới bar chưa fix (code lại đoạn này)
 - [ ] Notification chưa work
 - [ ] Chưa có chuyển theme của element bên trong
 

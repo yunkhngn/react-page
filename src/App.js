@@ -111,7 +111,6 @@ function App() {
       sessionStorage.setItem("themeCheck", 'light');
     }
   };
-
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
     if (data.is_on_maintenance === true) {
@@ -151,7 +150,7 @@ function App() {
         </Div>
       </div>
       </Suspense>
-      <AppHeader/>
+      <AppHeader theme={theme}/>
       <AppBar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}

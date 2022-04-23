@@ -1,5 +1,6 @@
 import React from "react";
 import "./AppHeader.css";
+import { Link } from "react-router-dom";
 
 const getTimeAndDate = () => {
   const date = new Date();
@@ -53,10 +54,11 @@ const getTimeAndDate = () => {
   }
 };
 
-const AppHeader = () => {
+const AppHeader = ({theme}) => {
   const [fullTime, setFulltime] = React.useState(getTimeAndDate());
   const [showDropdown, setShowDropdown] = React.useState(false);
 
+  // console.log("dropdownclick"+theme)
   React.useEffect(() => {
     setFulltime(getTimeAndDate());
     const interval = setInterval(() => {
@@ -64,7 +66,6 @@ const AppHeader = () => {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className="AppHeader noselect">
       <div className="left">
@@ -84,15 +85,12 @@ const AppHeader = () => {
       </div>
 
       {showDropdown && (
-        <div className="drop-down" onMouseOver="dropDown">
+        <div className={"drop-down dropdown" + theme}>
           <ul>
-            <li>Home</li>
-            <hr></hr>
-            <li>About</li>
-            <hr></hr>
-            <li>Projects</li>
-            <hr></hr>
-            <li>Pictures</li>
+            <Link  to="/"><li>Home</li></Link>
+            <Link to="/about"><li>About</li></Link>
+            <Link to="/projects"><li>Projects</li></Link>
+            <Link to="/pictures"><li>Pictures</li></Link>
           </ul>
         </div>
       )}
