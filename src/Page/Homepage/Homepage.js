@@ -5,7 +5,6 @@ import PageTemplate from '../../components/PageTemplate/PageTemplate';
 import Contact from '../../components/Contact/Contact';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 import MetaTag from '../../components/MetaTag/MetaTag';
-import Navbutton from '../../components/Navbutton/Navbutton';
 
 const Homepage = () => {
   return (
@@ -15,7 +14,6 @@ const Homepage = () => {
           <ProfileCard/>
           <Old/>
           <Contact/>
-          <Navbutton/>
       </PageTemplate>
     </AnimationTag>
     )

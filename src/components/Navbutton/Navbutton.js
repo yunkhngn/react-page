@@ -12,7 +12,7 @@ const Navbutton = () => {
     useEffect(() => {
         if(location.pathname === '/') {
             setGoWhere('/about');
-            setBackWhere('/picture');
+            setBackWhere('/pictures');
             setPage('1');
         }
         else if(location.pathname === '/about'){
@@ -21,11 +21,11 @@ const Navbutton = () => {
             setPage('2');
         }
         else if(location.pathname === '/projects'){
-            setGoWhere('/picture');
+            setGoWhere('/pictures');
             setBackWhere('/about');
             setPage('3');
         }
-        else if(location.pathname === '/picture'){
+        else if(location.pathname === '/pictures'){
             setGoWhere('/');
             setBackWhere('/projects');
             setPage('4');

@@ -50,6 +50,7 @@ const AppBar = ({
             icon="fas fa-home icon"
             name="Home"
             theme={theme}
+            url="/"
           />
           </Link>
         </div>
@@ -63,7 +64,7 @@ const AppBar = ({
               name={item.name}
               key={item.id}
               theme={theme}
-              
+              url={item.url}
             />
             </Link>
           ))}

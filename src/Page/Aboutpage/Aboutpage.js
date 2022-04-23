@@ -5,7 +5,6 @@ import Contact from '../../components/Contact/Contact';
 import AnimationTag from '../../components/AnimatedPage/AnimationTag';
 import MetaTag from '../../components/MetaTag/MetaTag';
 import Old from '../../components/Old/Old';
-import Navbutton from '../../components/Navbutton/Navbutton';
 import Aboutme from '../../components/Aboutme/Aboutme';
 
 const Aboutpage = () => {
@@ -17,7 +16,6 @@ const Aboutpage = () => {
         <Old/>
         <Aboutme/>
         <Contact/>
-        <Navbutton/>
       </PageTemplate>
     </AnimationTag>
   )
