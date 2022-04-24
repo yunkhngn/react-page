@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-import { Div, Text, Input, Row, Col, Button, Textarea
-} from "atomize";
-
-import {  useThemeState } from "../../../store";
+import { Div, Text, Input, Row, Col, Button, Textarea} from "atomize";
+import { useThemeState } from "../../../store";
 import { PostProps } from '../../Hooks'
 import  { Template } from '../../TemplateWebsite'
+
 const Contact = () => {
     const [name, setName] = useState(''); 
     const [email, setEmail] = useState('');
@@ -70,7 +69,7 @@ const Contact = () => {
       <Input textColor={theme ? "white" : "dark"} bg="transparent" borderColor={isValid ? (theme ? "#616161" : "gray500") : (theme ? "danger900" : "brand900")} value={subject} onInput={e => setSubject(e.target.value)} placeholder="Subject" m={{b:'1em'}}></Input>
       <Textarea textColor={theme ? "white" : "dark"} bg="transparent" borderColor={isValid ? (theme ? "#616161" : "gray500") : (theme ? "danger900" : "brand900")} value={message} onInput={e => setMessage(e.target.value)} placeholder="Message" m={{b:'1em'}} overflow="hidden" h="15em" maxH="15em" minH="15em"></Textarea>
       <Button onClick={submit} d={{lg:"none"}} w="100%" m={{b:'0.5em'}} bg={theme ? "danger800" : "danger300"} hoverBg={theme ? "danger900":"danger400"} textColor={theme ? "white":"danger700"} >Submit</Button>
-       <Text textColor={theme ? "#99999" : "black"} d={{lg:"none"}} textSize="caption" m={{b:'0.5em'}}>This function is working properly. So don't spam my email. Thank you!</Text>
+       <Text textWeight="400" textColor={theme ? "#999999" : "black"} d={{lg:"none"}} textSize="caption" m={{b:'0.5em'}}>This function is working properly. So don't spam my email. Thank you!</Text>
       </Div>
     </Col>
     <Col size={{ xs: 12, lg: 4 }}>

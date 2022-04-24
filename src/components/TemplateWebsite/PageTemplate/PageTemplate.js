@@ -16,7 +16,7 @@ const PageTemplate = ({children}) => {
     bg={theme ? "#212121" : "gray200"}
     h="auto"
     p={{t:'1em'}}
-    textColor={theme ? "#b9b9b9" : "dark"}
+    textColor={theme ? "white" : "dark"}
     >
     {children}
     <Div d={displayNav ? null : "none"}>

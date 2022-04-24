@@ -37,9 +37,9 @@ const Navbutton = () => {
     return (
     <Template>
         <Div m="auto" justify="center" d="flex">
-        <Link to={backWhere}><Button bg={theme?"#212121":"gray300"} hoverBg={theme ? "#333333":"gray400"} textColor={theme ? "#b9b9b9" : "dark" } >Go back</Button></Link>
-        <Text justify="center" m='auto' textSize="subheader" textWeight="500" textColor={theme ? "#b9b9b9" : "dark" }>Page {page}</Text>
-        <Link to={goWhere}><Button bg={theme?"#212121":"gray300"} hoverBg={theme ? "#333333":"gray400"} textColor={theme ? "#b9b9b9" : "dark" } >Go next</Button></Link>
+        <Link to={backWhere}><Button bg={theme?"#212121":"gray300"} hoverBg={theme ? "#333333":"gray400"} textColor={theme ? "white" : "dark" } >Go back</Button></Link>
+        <Text justify="center" m='auto' textSize="subheader" textWeight="500" textColor={theme ? "white" : "dark" }>Page {page}</Text>
+        <Link to={goWhere}><Button bg={theme?"#212121":"gray300"} hoverBg={theme ? "#333333":"gray400"} textColor={theme ? "white" : "dark" } >Go next</Button></Link>
         </Div>
     </Template> 
   )

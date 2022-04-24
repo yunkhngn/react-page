@@ -1,7 +1,7 @@
 import React from "react";
-import {Icon} from 'atomize'
 import "./AppIcons.css";
 import { useLocation } from "react-router-dom";
+import {Icon} from 'atomize'
 
 const AppIcons = ({icon, name, theme, clickHandler, url, alt}) => {
   const [bounce, setBounce] = React.useState(false);
@@ -22,14 +22,16 @@ const AppIcons = ({icon, name, theme, clickHandler, url, alt}) => {
         className={bounce ? "bounce icon2" : "icon2"}
       >
         <span
-          className={icon + " AppIcon" + theme}
+          className={"icon AppIcon" + theme}
           onClick={() => {
             changeHandler();
             if (clickHandler) {
               clickHandler();
             }
           }}
-        />
+        >
+          <Icon name={bounce ? "Loading" : icon} color={changeColor ? "#212121" : "gray300"} size="20px"/>
+        </span>
       </div>
       <Icon d={displayNav ? null : "none" } name="Dot" m="auto" color={changeColor ? "gray300" : "#212121"} size="10px"/>
     </div>

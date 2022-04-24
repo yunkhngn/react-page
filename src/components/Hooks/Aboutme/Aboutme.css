@@ -1,0 +1,44 @@
+.highlightdark{
+    box-shadow: inset 5em 0em 0em 0em #fdcb6e;
+    transition: box-shadow .3s ease-in-out;
+}
+.highlightdark:hover{
+    box-shadow: inset 0 0 0 0 #fdcb6e;
+}
+.spacing{
+    line-height:1.5em;
+}
+
+.highlightlight{
+    box-shadow: inset 5em 0em 0em 0em #f7af22;
+    transition: box-shadow .3s ease-in-out;
+}
+.highlightlight:hover{
+    box-shadow: inset 0 0 0 0 #f7af22;
+}
+.skills--program{
+    columns:4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    font-weight: 700;
+}
+.skills--tool{
+    columns:4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    font-weight: 700;
+  }
+
+
+@media only screen and (max-width: 768px){
+    .skills--program{
+      columns:2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+    .skills--tool{
+      columns:2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+}

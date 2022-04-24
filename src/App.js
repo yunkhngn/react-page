@@ -15,25 +15,25 @@ const socialMedia = [
   {
     id: 4,
     name: "Facebook",
-    icon: "fab fa-facebook icon seperate",
+    icon: "Facebook",
     link: "https://www.facebook.com/yun.khngn",
   },
   {
     id: 5,
     name: "Instagram",
-    icon: "fab fa-instagram icon",
+    icon: "Instagram",
     link: "https://instagram.com/yun.khngn_",
   },
   {
     id: 6,
     name: "Github",
-    icon: "fab fa-github icon",
+    icon: "Github",
     link: "https://github.com/yunkhngn",
   },
   {
     id: 7,
     name: "Behance",
-    icon: "fab fa-behance icon",
+    icon: "Behance",
     link: "https://www.behance.net/yunkhngn",
   },
 ];
@@ -42,19 +42,19 @@ const websiteOptions = [
   {
     id: 1,
     name: "About",
-    icon: "fas fa-user icon",
+    icon: "UserCircle",
     url: "/about",
   },
   {
     id: 2,
     name: "Projects",
-    icon: "fas fa-lightbulb icon",
+    icon: "Draft",
     url: "/projects",
   },
   {
     id: 3,
     name: "Picture",
-    icon: "fas fa-camera icon",
+    icon: "CameraSolid",
     url: "/pictures",
   },
 ];
@@ -107,14 +107,12 @@ function App() {
       setTheme("dark");
       sessionStorage.setItem("themeCheck", "dark");
       dispatch({ type: "light" });
-      console.log(state)
     } else {
       document.body.classList.remove();
       document.body.classList.add("Applight");
       setTheme("light");
       sessionStorage.setItem("themeCheck", 'light');
       dispatch({ type: "dark" });
-      console.log(state)
     }
   };
   // Return if we are on maintenance

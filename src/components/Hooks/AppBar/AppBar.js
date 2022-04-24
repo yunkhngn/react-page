@@ -47,7 +47,7 @@ const AppBar = ({
         <div>
           <Link to="/" className="section">
           <AppIcons
-            icon="fab fa-apple icon"
+            icon="HomeSolid"
             name="Home"
             theme={theme}
             url="/"
@@ -91,7 +91,7 @@ const AppBar = ({
 
         <div className="section ">
           <AppIcons
-            icon="fas fa-adjust icon"
+            icon="SettingsSolid"
             name="Change Theme"
             theme={theme}
             clickHandler={changeTheme}
@@ -100,7 +100,7 @@ const AppBar = ({
         </div>
         <div className="section">
           <AppIcons
-            icon={playing ? "fas fa-volume icon" : "fas fa-volume-slash icon"}
+            icon={playing ? "Pause" : "Play"}
             name="Menu"
             theme={theme}
             clickHandler={toggle}
