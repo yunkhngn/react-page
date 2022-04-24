@@ -1,6 +1,5 @@
 .Applight {
   text-align: center;
-
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
@@ -13,7 +12,6 @@
   background-image: url(./assets/macos-big-sur.jpg);
   max-height: -webkit-fill-available;
 }
-
 .Appdark {
   text-align: center;
 
@@ -30,6 +28,15 @@
   background-image: url(./assets/macos-monterey.jpg);
 }
 
+
+.Headerdark{
+  background: #262626;
+}
+
+.Headerlight{
+  background: #f3eef2;
+}
+
 .App {
   transition: background-image 1s ease;
 }
@@ -41,23 +48,12 @@
   border-radius: 10px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-.Pagelight{
-  background: #f7f8f9;
-}
-
-.Pagedark{
-  background: #1d1d1d;
-}
-
 
 .HeaderPage{
   width: auto;
   height: 20px;
   border-radius: 10px 10px 0 0;
-  background: #f3eef2;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   text-align: left;

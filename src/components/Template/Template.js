@@ -1,17 +1,21 @@
 import React from 'react'
 import { Div } from 'atomize'
 import Spacer from '../Spacer/Spacer'
+import {  useThemeState } from "../../store";
 
 const Template = ({children}) => {
+  const [state] = useThemeState();
+  const theme = state === 'light'
+  
   return (
     <div>
     <Div
-    bg='white'
+    bg={ theme ? '#1c1c21' : 'white'}
     w='90%'
     m='auto'
     p="2em"
     border="1px solid"
-    borderColor="gray300"
+    borderColor={theme ? '#1c1c21' : 'gray200'}
     rounded="xl"
     > 
     {children}

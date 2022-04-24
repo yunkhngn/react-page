@@ -31,7 +31,7 @@ const AppIcons = ({icon, name, theme, clickHandler, url, alt}) => {
           }}
         />
       </div>
-      <Icon d={displayNav ? null : "none" } name="Dot" m="auto" color={changeColor ? "gray300" : "dark"} size="10px"/>
+      <Icon d={displayNav ? null : "none" } name="Dot" m="auto" color={changeColor ? "gray300" : "#212121"} size="10px"/>
     </div>
   );
 };

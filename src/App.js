@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import React, {Suspense} from "react";
 import "./App.css";
 import { Div } from "atomize";
+import {  useThemeState } from "./store";
 
 import AppBar from "./components/AppBar/AppBar";
 import AppHeader from "./components/AppHeader/AppHeader";
@@ -50,6 +51,10 @@ function someMethodIThinkMightBeSlow() {
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [state, dispatch] = useThemeState();
+  const url = Audio;
+  const themeStatement = state === 'light'
+
   useEffect(() => {
     someMethodIThinkMightBeSlow();
     //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
@@ -59,22 +64,25 @@ function App() {
       setTheme("light");
       document.body.classList.remove();
       document.body.classList.add("Applight");
+      dispatch({ type: "dark" });
     }
     else if (themeCheck === "light") {
       themeCheck = "light";
       setTheme("light");
       document.body.classList.remove();
       document.body.classList.add("Applight");
+      dispatch({ type: "dark" });
     } 
     else {
       themeCheck = "dark";
       setTheme("dark");
       document.body.classList.remove();
       document.body.classList.add("Appdark");
+      dispatch({ type: "light" });
     }
     sessionStorage.setItem("themeCheck", themeCheck);
     setTheme(themeCheck)
-  }, []);
+  }, [dispatch]);
 
   const websiteOptions = [
     {
@@ -96,7 +104,6 @@ function App() {
       url: "/pictures",
     },
   ];
-  const url = Audio;
   const changeTheme = () => {
 
     if (theme === "light") {
@@ -104,11 +111,15 @@ function App() {
       document.body.classList.add("Appdark");
       setTheme("dark");
       sessionStorage.setItem("themeCheck", "dark");
+      dispatch({ type: "light" });
+      console.log(state)
     } else {
       document.body.classList.remove();
       document.body.classList.add("Applight");
       setTheme("light");
       sessionStorage.setItem("themeCheck", 'light');
+      dispatch({ type: "dark" });
+      console.log(state)
     }
   };
   const getMaintenanceStatus = () => {
@@ -126,19 +137,19 @@ function App() {
     <div className={"App App" + theme}>
       <Suspense fallback={null}>
       <div className="AppPage">
-      <Div bg="gray200" rounded='10px'>
-        <div className="HeaderPage" id="top">
+      <Div bg={themeStatement ? "#212121" : "gray200"} rounded='10px'>
+        <div className={"HeaderPage Header"+theme} id="top">
           <div className="dotnav"/>
           <div className="dotnav yellow"/>
           <div className="dotnav green"/>
         </div>
 
         <div className="ContainerText">
-          {/* Tất cả route các thứ nằm ở components này do có animation */}
           <AnimatedPage/>
         </div>
+
         <Div
-        bg='gray200'
+        bg={themeStatement ? "#212121" : "gray200"}
         h="100%"
         justify="center"
         align="center"

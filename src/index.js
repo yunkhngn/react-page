@@ -7,6 +7,7 @@ import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
 import { StyleReset } from 'atomize';
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import { ThemeStateProvider } from "./store";
 
 const debug =
   process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
@@ -16,8 +17,10 @@ const engine = new Styletron();
 ReactDOM.render(
      <StyletronProvider value={engine} debug={debug} debugAfterHydration>
       <ErrorBoundary>
-      <StyleReset />
-      <App/>
+        <ThemeStateProvider>
+          <StyleReset />
+          <App/>
+        </ThemeStateProvider>
       </ErrorBoundary>
     </StyletronProvider>,
   document.getElementById("root")

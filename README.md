@@ -11,6 +11,7 @@
 - [x] Dropdown chưa có route
 - [x] Dot dưới bar chưa fix (code lại đoạn này)
 - [ ] Notification chưa work
-- [ ] Chưa có chuyển theme của element bên trong
+- [x] Chưa có chuyển theme của element bên trong
+- [ ] Chưa viết nội dung
 
 Thế thôi không có gì nhiều lắm. Có gì mình hoàn thiện

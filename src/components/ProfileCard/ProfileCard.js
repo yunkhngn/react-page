@@ -5,7 +5,7 @@ import Avatar from '../../assets/Illustrate.svg';
 import CV from '../../assets/Khoa Nguyen CV.pdf';
 import SocialLink from '../SocialLink/SocialLink';
 import Template from '../Template/Template';
-
+import {  useThemeState } from "../../store";
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
 }
@@ -16,12 +16,15 @@ const downloadCV = () => {
 }
 
 const ProfileCard = () => {
+  const [state] = useThemeState();
+  const theme = state === 'light'
+
   return (
     <Template>
-          <Image src={Avatar} shadow="1" border="0.5em solid" borderColor="gray200" rounded="circle" m="auto" w={{ xs: "60%", md: "20%" }}/>
+          <Image src={Avatar} shadow="1" border="0.5em solid" borderColor={theme ? "#212121" : "gray200"} rounded="circle" m="auto" w={{ xs: "60%", md: "20%" }}/>
           <Text textSize="heading" textWeight="600">Khoa Nguyễn</Text>
-          <Text textSize="caption" textColor="gray800">Senior Designer / Front-end Developer</Text>
-          <Text textSize="paragraph" textColor="gray900" overflow="" maxW="20em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">Những ước mơ không chết chừng nào bạn còn nuôi dưỡng nó bằng niềm đam mê.</Text>
+          <Text textSize="caption" textColor={theme ? "#b3bac4" : "gray800"}>Senior Designer / Front-end Developer</Text>
+          <Text textSize="paragraph" textColor={theme ? "#b3bac4" : "gray900"} overflow="" maxW="20em" m={{t:'1em', b:'auto',l:'auto', r:'auto'}} textWeight="500">Những ước mơ không chết chừng nào bạn còn nuôi dưỡng nó bằng niềm đam mê.</Text>
           <Div
             d="flex"
             justify="center"
@@ -43,8 +46,8 @@ const ProfileCard = () => {
               m={{ l: "1rem" }}
               />
               } 
-              bg="info600"
-              hoverBg="info700"
+              bg={theme ? "info800":"info600"}
+              hoverBg={theme? "info900":"info700"}
               rounded="circle"
               p={{ r: "1rem", l: "1rem" }}
               m={{ r: "0.5rem" }}
@@ -60,10 +63,10 @@ const ProfileCard = () => {
               />
               }
               textColor="gray900" 
-              bg="white"
-              hoverBg="gray300"
+              bg="transparent"
+              hoverBg={theme? "#262626" : "gray300"}
               border="1px solid"
-              borderColor="gray500"
+              borderColor={theme? "#616161" :"gray500"}
               rounded="circle"
               p={{ r: "1rem", l: "1rem" }}
               onClick={downloadCV}
