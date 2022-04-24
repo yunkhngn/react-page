@@ -2,8 +2,8 @@ import React from 'react'
 import { Div, Text, Image, Icon
 } from "atomize";
 
-import Sample from '../../../assets/wall.png';
-import Avatar from '../../../assets/Illustrate.svg';
+import Sample from '../../../assets/Image/wall.png';
+import Avatar from '../../../assets/Image/Illustrate.svg';
 
 import { useThemeState } from "../../../store";
 

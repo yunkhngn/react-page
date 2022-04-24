@@ -3,7 +3,7 @@ import { Template } from '../../TemplateWebsite'
 import { useThemeState } from "../../../store";
 import { Div , Row, Col, Text, Button, Image} from 'atomize'
 import './Aboutme.css'
-import Img from '../../../assets/work-4.jpg' 
+import Img from '../../../assets/Image/work-4.jpg' 
 
 const Aboutme = () => {
   const [state] = useThemeState();

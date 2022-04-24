@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Div, Text, Input, Row, Col, Button, Textarea} from "atomize";
 import { useThemeState } from "../../../store";
-import { PostProps } from '../../Hooks'
+import { PostProps } from '../'
 import  { Template } from '../../TemplateWebsite'
 
 const Contact = () => {
@@ -53,7 +53,7 @@ const Contact = () => {
     }
   return (
     <Template>
-    <Text textColor={theme ? "#99999" : "black"} textSize="heading" textWeight="600" m={{b:'1em'}}>Contact me</Text>
+    <Text textColor={theme ? "#99999" : "black"} textSize="display1" textWeight="600" m={{b:'1em'}}>Contact me</Text>
     <Row>
     <Col size={{ xs: 12, lg: 3 }}>
       <Div>

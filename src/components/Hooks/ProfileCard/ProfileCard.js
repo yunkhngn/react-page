@@ -1,6 +1,6 @@
 import React from 'react'
 import { Div, Text, Image, Button, Icon} from "atomize";
-import Avatar from '../../../assets/Illustrate.svg';
+import Avatar from '../../../assets/Image/Illustrate.svg';
 import CV from '../../../assets/Khoa Nguyen CV.pdf';
 
 import { useThemeState } from "../../../store";

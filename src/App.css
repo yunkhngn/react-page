@@ -9,7 +9,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  background-image: url(./assets/macos-big-sur.jpg);
+  background-image: url(./assets/Image/macos-big-sur.jpg);
   max-height: -webkit-fill-available;
 }
 .Appdark {
@@ -25,7 +25,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  background-image: url(./assets/macos-monterey.jpg);
+  background-image: url(./assets/Image/macos-monterey.jpg);
 }
 
 

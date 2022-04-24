@@ -2,7 +2,7 @@ import React from 'react'
 import { Div } from 'atomize'
 import { useThemeState } from "../../../store";
 import { useLocation } from 'react-router-dom'
-import { Navbutton } from '../../Hooks/';
+import { Navbutton } from '../../Hooks';
 
 const PageTemplate = ({children}) => {
   const [state] = useThemeState();
