@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Div, Text, Image, Icon
 } from "atomize";
 import Sample from '../../assets/wall.png';
@@ -22,22 +22,13 @@ const getCurrentDate = () => {
 
 const PostProps = () => {
     const [isHearted, setIsHearted] = React.useState(false);
-    const [dateNow, setDateNow] = React.useState(getCurrentDate());
+    const dateNow = getCurrentDate();
+
     const [state] = useThemeState();
     const theme = state === 'light'
 
-    useEffect (() => {
-        setInterval(() => {
-            setDateNow(getCurrentDate());
-        }, 1000);
-    }, [])
-
     const Hearted = () => {
-        if (isHearted === false) {
-            setIsHearted(true);
-        } else {
-            setIsHearted(false);
-        }
+        setIsHearted(!isHearted);
     };
 
     return (

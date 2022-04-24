@@ -3,14 +3,14 @@
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   background-image: url(./assets/macos-big-sur.jpg);
-  /* max-height: -webkit-fill-available; */
+  max-height: -webkit-fill-available;
 }
 .Appdark {
   text-align: center;
@@ -18,8 +18,8 @@
   width: 100%;
   height: 100vh;
   overflow-x: hidden;     
-  /* max-height: -webkit-fill-available;                                                                                                                                                                                                       */
-  min-height: -webkit-fill-available;
+  max-height: -webkit-fill-available;                                                                                                                                                                                                      
+  /* min-height: -webkit-fill-available; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
