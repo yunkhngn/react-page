@@ -1,11 +1,12 @@
 import React from 'react'
-import { Div, Text, Image, Button, Icon
-} from "atomize";
-import Avatar from '../../assets/Illustrate.svg';
-import CV from '../../assets/Khoa Nguyen CV.pdf';
-import SocialLink from '../SocialLink/SocialLink';
-import Template from '../Template/Template';
-import {  useThemeState } from "../../store";
+import { Div, Text, Image, Button, Icon} from "atomize";
+import Avatar from '../../../assets/Illustrate.svg';
+import CV from '../../../assets/Khoa Nguyen CV.pdf';
+
+import { useThemeState } from "../../../store";
+import { SocialLink } from '../';
+import { Template } from '../../TemplateWebsite/'
+
 const openFacebook = () => {
   window.open('https://www.facebook.com/yun.khngn', '_blank');
 }

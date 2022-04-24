@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import {Div, Button,Text} from 'atomize'
 import { useLocation, Link } from 'react-router-dom'
-import Template from '../Template/Template';
-import {  useThemeState } from "../../store";
+import {  useThemeState } from "../../../store";
+import { Template } from '../../TemplateWebsite'
 
 const Navbutton = () => {
     const location = useLocation();

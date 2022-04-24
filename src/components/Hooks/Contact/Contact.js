@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { Div, Text, Input, Row, Col, Button, Textarea
 } from "atomize";
-import PostProps from '../PostProps/PostProps';
-import Template from '../Template/Template'
-import {  useThemeState } from "../../store";
 
+import {  useThemeState } from "../../../store";
+import { PostProps } from '../../Hooks'
+import  { Template } from '../../TemplateWebsite'
 const Contact = () => {
     const [name, setName] = useState(''); 
     const [email, setEmail] = useState('');

@@ -1,0 +1,5 @@
+export {default as AnimatedPage} from './AnimatedPage/AnimatedPage'
+export {default as AnimationTag} from './AnimatedPage/AnimationTag'
+export {default as MetaTag} from './MetaTag/MetaTag'
+export {default as PageTemplate} from './PageTemplate/PageTemplate'
+export {default as Template } from './Template/Template'

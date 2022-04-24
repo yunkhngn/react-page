@@ -1,10 +1,7 @@
 import React from 'react'
-import Old from '../../components/Old/Old'
-import ProfileCard from '../../components/ProfileCard/ProfileCard';
-import PageTemplate from '../../components/PageTemplate/PageTemplate';
-import Contact from '../../components/Contact/Contact';
-import AnimationTag from '../../components/AnimatedPage/AnimationTag';
-import MetaTag from '../../components/MetaTag/MetaTag';
+
+import { ProfileCard, Contact, OldPage } from '../../components/Hooks';
+import { PageTemplate, AnimationTag, MetaTag } from '../../components/TemplateWebsite';
 
 const Homepage = () => {
   return (
@@ -12,7 +9,7 @@ const Homepage = () => {
       <MetaTag titlePage="Home"/>
       <PageTemplate>
           <ProfileCard/>
-          <Old/>
+          <OldPage/>
           <Contact/>
       </PageTemplate>
     </AnimationTag>

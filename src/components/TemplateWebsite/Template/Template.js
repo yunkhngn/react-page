@@ -1,7 +1,7 @@
 import React from 'react'
 import { Div } from 'atomize'
-import Spacer from '../Spacer/Spacer'
-import {  useThemeState } from "../../store";
+import { useThemeState } from "../../../store";
+import { Spacer } from '../../Hooks/'
 
 const Template = ({children}) => {
   const [state] = useThemeState();

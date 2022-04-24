@@ -1,9 +1,9 @@
 import React from 'react'
 import {Button,  Icon} from "atomize";
-import Template from '../Template/Template';
-import {  useThemeState } from "../../store";
+import { useThemeState } from "../../../store";
+import {Template} from '../../TemplateWebsite'
 
-const Old = () => {
+const OldPage = () => {
   const [state] = useThemeState();
   const theme = state === 'light'
   return (
@@ -24,4 +24,4 @@ const Old = () => {
   )
 }
 
-export default Old
+export default OldPage

@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
 import { StyleReset } from 'atomize';
-import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "./Page/ErrorBoundary/ErrorBoundary";
 import { ThemeStateProvider } from "./store";
 
 const debug =
@@ -18,7 +18,7 @@ ReactDOM.render(
      <StyletronProvider value={engine} debug={debug} debugAfterHydration>
       <ErrorBoundary>
         <ThemeStateProvider>
-          <StyleReset />
+          <StyleReset/>
           <App/>
         </ThemeStateProvider>
       </ErrorBoundary>

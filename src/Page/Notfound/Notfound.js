@@ -1,9 +1,8 @@
 import React from 'react'
 import { Text, Button } from 'atomize'
 import { Link } from 'react-router-dom'
-import MetaTag from '../../components/MetaTag/MetaTag';
-import AnimationTag from '../../components/AnimatedPage/AnimationTag';
-import PageTemplate from '../../components/PageTemplate/PageTemplate';
+
+import { PageTemplate, AnimationTag, MetaTag } from '../../components/TemplateWebsite';
 
 const Notfound = () => {
   return (

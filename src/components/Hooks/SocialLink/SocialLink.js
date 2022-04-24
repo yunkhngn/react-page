@@ -1,6 +1,6 @@
 import React from 'react'
 import {Div, Button, Icon} from 'atomize'
-import {  useThemeState } from "../../store";
+import { useThemeState } from "../../../store";
 
 const SocialLink = () => {
   const [state] = useThemeState();

@@ -1,9 +1,11 @@
 import React from 'react'
 import { Div, Text, Image, Icon
 } from "atomize";
-import Sample from '../../assets/wall.png';
-import Avatar from '../../assets/Illustrate.svg';
-import {  useThemeState } from "../../store";
+
+import Sample from '../../../assets/wall.png';
+import Avatar from '../../../assets/Illustrate.svg';
+
+import { useThemeState } from "../../../store";
 
 const getCurrentDate = () => {
     const date = new Date();

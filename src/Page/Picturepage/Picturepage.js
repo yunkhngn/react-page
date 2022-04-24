@@ -1,7 +1,6 @@
 import React from 'react'
-import MetaTag from '../../components/MetaTag/MetaTag';
-import AnimationTag from '../../components/AnimatedPage/AnimationTag';
-import PageTemplate from '../../components/PageTemplate/PageTemplate';
+
+import { PageTemplate, AnimationTag, MetaTag } from '../../components/TemplateWebsite';
 
 const Picturepage = () => {
   return (

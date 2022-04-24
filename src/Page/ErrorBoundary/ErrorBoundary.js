@@ -1,6 +1,7 @@
 import React from "react";
 import {Div, Text, Icon} from "atomize";
-import Template from '../Template/Template'
+import { Template } from "../../components/TemplateWebsite";
+
 export class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Div, Text } from 'atomize';
-import {  useThemeState } from "../../store";
-import Spacer from '../Spacer/Spacer';
+import { useThemeState } from "../../../store";
+import { Spacer } from '../'
 
 const Footer = () => {
     const [year, setYear] = React.useState(new Date().getFullYear());

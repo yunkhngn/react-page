@@ -1,17 +1,13 @@
-import { useEffect, useState } from "react";
-import React, {Suspense} from "react";
+import React, {Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Div } from "atomize";
-import {  useThemeState } from "./store";
+import { BrowserRouter } from "react-router-dom";
 
-import AppBar from "./components/AppBar/AppBar";
-import AppHeader from "./components/AppHeader/AppHeader";
-import Footer from "./components/Footer/Footer";
-import Maintenance from "./components/Maintenance/Maintenance";
-import {BrowserRouter} from "react-router-dom";
-import Spacer from "./components/Spacer/Spacer";
-import AnimatedPage from "./components/AnimatedPage/AnimatedPage";
+import Maintenance from './Page/Maintenance/Maintenance'
 import Audio from "./assets/audio/tayto.mp3";
+import { Bar, Header, Footer, Spacer } from "./components/Hooks";
+import { AnimatedPage } from "./components/TemplateWebsite";
+import {  useThemeState } from "./store";
 
 const socialMedia = [
   {
@@ -161,8 +157,8 @@ function App() {
         </Div>
       </div>
       </Suspense>
-      <AppHeader theme={theme}/>
-      <AppBar
+      <Header theme={theme}/>
+      <Bar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}
         theme={theme}
