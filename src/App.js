@@ -1,14 +1,16 @@
+// Libraries
 import React, {Suspense, useEffect, useState } from "react";
 import "./App.css";
 import { Div } from "atomize";
 import { BrowserRouter } from "react-router-dom";
-
+// Assets
 import Maintenance from './Page/Maintenance/Maintenance'
 import Audio from "./assets/audio/tayto.mp3";
+// Hook viết sẵn ở components
 import { Bar, Header, Footer, Spacer } from "./components/Hooks";
 import { AnimatedPage } from "./components/TemplateWebsite";
 import {  useThemeState } from "./store";
-
+// Social links for Bar
 const socialMedia = [
   {
     id: 4,
@@ -35,25 +37,43 @@ const socialMedia = [
     link: "https://www.behance.net/yunkhngn",
   },
 ];
-
+//Website options
+const websiteOptions = [
+  {
+    id: 1,
+    name: "About",
+    icon: "fas fa-user icon",
+    url: "/about",
+  },
+  {
+    id: 2,
+    name: "Projects",
+    icon: "fas fa-lightbulb icon",
+    url: "/projects",
+  },
+  {
+    id: 3,
+    name: "Picture",
+    icon: "fas fa-camera icon",
+    url: "/pictures",
+  },
+];
+// Checking performance
 function someMethodIThinkMightBeSlow() {
   const startTime = performance.now();
-
-  // Do the normal stuff for this function
-
   const duration = performance.now() - startTime;
   console.log(`Loading methods took ${duration}ms`);
 }
-
+// Main function
 function App() {
+  // Constances
   const [theme, setTheme] = useState('light');
   const [state, dispatch] = useThemeState();
   const url = Audio;
   const themeStatement = state === 'light'
-
+  // Checking theme status
   useEffect(() => {
     someMethodIThinkMightBeSlow();
-    //Hàm này vào trang check xem session của cái theme đang là gì, null thì gán vào là light, light là light, dark là dark
     var themeCheck = sessionStorage.getItem("themeCheck");
     if (themeCheck == null) {
       themeCheck = "light";
@@ -79,29 +99,8 @@ function App() {
     sessionStorage.setItem("themeCheck", themeCheck);
     setTheme(themeCheck)
   }, [dispatch]);
-
-  const websiteOptions = [
-    {
-      id: 1,
-      name: "About",
-      icon: "fas fa-user icon",
-      url: "/about",
-    },
-    {
-      id: 2,
-      name: "Projects",
-      icon: "fas fa-lightbulb icon",
-      url: "/projects",
-    },
-    {
-      id: 3,
-      name: "Picture",
-      icon: "fas fa-camera icon",
-      url: "/pictures",
-    },
-  ];
+  //Change theme between light and dark
   const changeTheme = () => {
-
     if (theme === "light") {
       document.body.classList.remove();
       document.body.classList.add("Appdark");
@@ -118,6 +117,7 @@ function App() {
       console.log(state)
     }
   };
+  // Return if we are on maintenance
   const getMaintenanceStatus = () => {
     var data = require('./Json/isMaintenanceOrNot.json')
     if (data.is_on_maintenance === true) {
@@ -130,43 +130,42 @@ function App() {
   else{
   return (
     <BrowserRouter>
-    <div className={"App App" + theme}>
-      <Suspense fallback={null}>
-      <div className="AppPage">
-      <Div bg={themeStatement ? "#212121" : "gray200"} rounded='10px'>
-        <div className={"HeaderPage Header"+theme} id="top">
-          <div className="dotnav"/>
-          <div className="dotnav yellow"/>
-          <div className="dotnav green"/>
-        </div>
+      <div className={"App App" + theme}>
+        <Suspense fallback={null}>
+          
+          <div className="AppPage">
+            <Div bg={themeStatement ? "#212121" : "gray200"} rounded='10px'>
+              <div className={"HeaderPage Header"+theme} id="top">
+                <div className="dotnav"/>
+                <div className="dotnav yellow"/>
+                <div className="dotnav green"/>
+              </div>
 
-        <div className="ContainerText">
-          <AnimatedPage/>
-        </div>
+              <div className="ContainerText">
+                <AnimatedPage/>
+              </div>
 
-        <Div
-        bg={themeStatement ? "#212121" : "gray200"}
-        h="100%"
-        justify="center"
-        align="center"
-        rounded={{b: "10px"}}
-        p={{b: "10px"}}
-        >
-        <Footer/>
-        </Div>
-        </Div>
-      </div>
-      </Suspense>
-      <Header theme={theme}/>
-      <Bar
+              <Div
+                bg={themeStatement ? "#212121" : "gray200"}
+                h="100%"
+                justify="center"
+                align="center"
+                rounded={{b: "10px"}}
+                p={{b: "10px"}}>
+                <Footer/>
+              </Div>
+            </Div>
+          </div>
+        </Suspense>
+        <Header theme={theme}/>
+        <Bar
         websiteOptions={websiteOptions}
         socialMedia={socialMedia}
         theme={theme}
         changeTheme={changeTheme}
-        url={url}
-      />
-      <Spacer/>
-    </div>
+        url={url}/>
+        <Spacer/>
+      </div>
     </BrowserRouter>
   );
   }
