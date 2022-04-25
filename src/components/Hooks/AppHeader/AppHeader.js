@@ -69,7 +69,6 @@ const AppHeader = ({theme}) => {
   return (
     <div className="AppHeader noselect">
       <div className="left">
-        <span className="fab fa-apple apple-logo"></span>
         <span
           className="menus active noselect"
           onClick={() => setShowDropdown(() => !showDropdown)}

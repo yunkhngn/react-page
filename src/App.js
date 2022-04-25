@@ -9,7 +9,7 @@ import Audio from "./assets/audio/tayto.mp3";
 // Hook viết sẵn ở components
 import { Bar, Header, Footer, Spacer } from "./components/Hooks";
 import { AnimatedPage } from "./components/TemplateWebsite";
-import {  useThemeState } from "./store";
+import { useThemeState } from "./store";
 // Social links for Bar
 const socialMedia = [
   {
