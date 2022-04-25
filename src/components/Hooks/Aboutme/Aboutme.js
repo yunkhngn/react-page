@@ -26,7 +26,7 @@ const Aboutme = () => {
         <Col size={{ xs: 12, lg: 8 }}>
           <Div m={{l:'1em'}}>
             <Div textColor={theme ? "white" : "dark"} m="auto" justify="center">
-              <Div textColor={theme ? "white" : "dark"} textAlign="left" fontFamily="Lora" textSize={{md:"display3", xs:"3em"}} textWeight="400">
+              <Div textColor={theme ? "white" : "dark"} textAlign="left" fontFamily="Lora" textSize={{md:"display3", xs:"2.5em"}} textWeight="400">
                 <div className="spacing">
                 "Software <span className={"highlight"+state}>Developer</span>,<br/>Front-end <span className={"highlight"+state}>Developer.</span><br/>Graphic, UX/UI,<br/>
                 3D Model <span className={"highlight"+state}>Designer</span>,<br/>Founder of <span className={"highlight"+state}>The Okyo</span>."</div>
