@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ProfileCard, Contact, OldPage, Aboutme, Experience } from '../../components/Hooks/';
+import { ProfileCard, Contact, OldPage, Aboutme, Experience, CareerRoad } from '../../components/Hooks/';
 import {PageTemplate, AnimationTag, MetaTag} from '../../components/TemplateWebsite';
 
 const Aboutpage = () => {
@@ -12,6 +12,7 @@ const Aboutpage = () => {
         <OldPage/>
         <Aboutme/>
         <Experience/>
+        <CareerRoad/>
         <Contact/>
       </PageTemplate>
     </AnimationTag>

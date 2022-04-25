@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileCard, Contact, OldPage, Experience, Aboutme } from '../../components/Hooks';
+import { ProfileCard, OldPage } from '../../components/Hooks';
 import { PageTemplate, AnimationTag, MetaTag } from '../../components/TemplateWebsite';
 
 const Homepage = () => {
@@ -9,9 +9,6 @@ const Homepage = () => {
       <PageTemplate>
         <ProfileCard/>
         <OldPage/>
-        <Aboutme/>
-        <Experience/>
-        <Contact/>
       </PageTemplate>
     </AnimationTag>
     )
