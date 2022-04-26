@@ -29,7 +29,7 @@ const TimelineHook = ({ExperienceRoad}) => {
     const [state] = useThemeState();
     const theme = state === 'light'
   return (
-    <Timeline theme={theme ? Dark : Light} dateFormat='only-number'>
+    <Timeline theme={theme ? Dark : Light} dateFormat='only-number' lang="en">
         {ExperienceRoad.map((item) => {
             return (
                 <SectionHooks

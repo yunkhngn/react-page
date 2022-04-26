@@ -64,6 +64,7 @@ function someMethodIThinkMightBeSlow() {
   const duration = performance.now() - startTime;
   console.log(`Loading methods took ${duration}ms`);
 }
+
 // Main function
 function App() {
   // Constances
